@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/SampleScene.unity
+- path: Assets/FunkyCode/Games - SmartSlicer2D/Game - Fruit Slicer/Game - Fruit Slicer.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
