@@ -185,6 +185,11 @@ PrefabInstance:
       propertyPath: m_Parameters.shadowBias
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 114917829282735026, guid: b6022dd06aaaef747a33548e1cbe61c2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 224244151492390500, guid: b6022dd06aaaef747a33548e1cbe61c2,
         type: 3}
       propertyPath: m_AnchorMin.y
