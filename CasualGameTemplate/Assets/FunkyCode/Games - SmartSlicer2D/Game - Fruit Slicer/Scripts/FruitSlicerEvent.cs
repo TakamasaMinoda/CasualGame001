@@ -15,7 +15,7 @@ namespace Slicer2D {
 		{
 			FruitSlicerGameManager.instance.score += 15;
 
-			//スライスされた前オブジェクトを読み込み
+			//スライスされた全オブジェクトを読み込み
 			foreach(GameObject g in slice.GetGameObjects()) {
 				
 				//はじけてるかんをだす

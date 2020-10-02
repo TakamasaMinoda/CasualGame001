@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DebugKillTime.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 12 - AI\DemoCanon.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 15 - Vert\Slicer2DControllerVertice.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 16 - Tutorial\Demo16Tutorial.cs" />
@@ -217,6 +218,9 @@
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\Scripts\Utilities\VirtualTransform.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UICanvasScale.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UITextScale.cs" />
+    <Compile Include="Assets\IneFadeOut.cs" />
+    <Compile Include="Assets\IneSliceEvent.cs" />
+    <Compile Include="Assets\IneSpawn.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolManager_sample.cs" />
