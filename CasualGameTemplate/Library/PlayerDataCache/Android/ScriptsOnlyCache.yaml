@@ -1,44 +1,22 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
-    - Demo10BoxSpawner
-    - Demo6Manager
-    - DemoAttachPrefab
     - DemoBackgroundManager
-    - DemoFollowMouse
-    - DemoFpsHelper
-    - DemoMainManager
-    - DemoSceneDestroyer
-    - DemoSlicer2DInspectorTracker
-    - DemoTabs
     - DivideShadowScript
-    - DivideUIFade
+    - IneSpawn
     - Mesh2D
     - PointSlicerSlash
     - Slicer2D.ColliderLineRenderer2D
+    - Slicer2D.DebugKillTime
     - Slicer2D.Demo6BombUpdate
-    - Slicer2D.DemoDropdownController
-    - Slicer2D.DemoObjectsCounter
-    - Slicer2D.DemoSlicer2DInspector
-    - Slicer2D.DivideGameManager
     - Slicer2D.DividePush
     - Slicer2D.FruitSlicerEvent
-    - Slicer2D.FruitSlicerGameManager
-    - Slicer2D.FruitSlicerSpawner
-    - Slicer2D.JointLineRenderer2D
-    - Slicer2D.PointSlicerController
+    - Slicer2D.IneSliceEvent
     - Slicer2D.Slicer2D
-    - Slicer2D.Slicer2DComplexTrackedController
     - Slicer2D.Slicer2DController
     - Slicer2D.Slicer2DParticles
     - Slicer2D.Slicer2DSettingsProfile
     - Slicer2D.Slicer2DSound
-    - Slicer2D.ThinSliceBall
-    - Slicer2D.ThinSliceGameManager
-    - Slicer2D.ThinSliceRules
-    - Slicer2D.ThinSlicerUIBar
-    - UICanvasScale
-    - UITextScale
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
@@ -54,20 +32,15 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
+    - UnityEngine.UI.AspectRatioFitter
     - UnityEngine.UI.CanvasScaler
-    - UnityEngine.UI.Dropdown
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
-    - UnityEngine.UI.Mask
-    - UnityEngine.UI.ScrollRect
-    - UnityEngine.UI.Scrollbar
     - UnityEngine.UI.Text
-    - UnityEngine.UI.Toggle
   sceneClasses:
-    Assets/FunkyCode/Demos - SmartSlicer2D/MainDemo.unity:
+    Assets/Scenes/SampleScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -82,6 +55,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 33
       Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
     - Class: 50
@@ -92,125 +67,65 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
-    - Class: 68
-      Script: {instanceID: 0}
-    - Class: 70
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 83
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 96
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
-    - Class: 114
-      Script: {instanceID: 11232}
+    - Class: 108
+      Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11234}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11574}
     - Class: 114
-      Script: {instanceID: 11466}
+      Script: {instanceID: 11728}
     - Class: 114
-      Script: {instanceID: 11478}
+      Script: {instanceID: 11832}
     - Class: 114
-      Script: {instanceID: 11576}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 11580}
+      Script: {instanceID: 11934}
     - Class: 114
-      Script: {instanceID: 11632}
+      Script: {instanceID: 11952}
     - Class: 114
-      Script: {instanceID: 11730}
+      Script: {instanceID: 12026}
     - Class: 114
-      Script: {instanceID: 11834}
+      Script: {instanceID: 12122}
     - Class: 114
-      Script: {instanceID: 11892}
-    - Class: 114
-      Script: {instanceID: 11906}
-    - Class: 114
-      Script: {instanceID: 11954}
-    - Class: 114
-      Script: {instanceID: 12028}
-    - Class: 114
-      Script: {instanceID: 12108}
-    - Class: 114
-      Script: {instanceID: 12112}
-    - Class: 114
-      Script: {instanceID: 12124}
-    - Class: 114
-      Script: {instanceID: 12138}
-    - Class: 114
-      Script: {instanceID: 12158}
+      Script: {instanceID: 12136}
     - Class: 114
       Script: {instanceID: 12348}
     - Class: 114
-      Script: {instanceID: 12366}
-    - Class: 114
       Script: {instanceID: 12474}
-    - Class: 114
-      Script: {instanceID: 12508}
-    - Class: 114
-      Script: {instanceID: 12572}
-    - Class: 114
-      Script: {instanceID: 12576}
-    - Class: 114
-      Script: {instanceID: 12648}
-    - Class: 114
-      Script: {instanceID: 12668}
-    - Class: 114
-      Script: {instanceID: 12684}
     - Class: 114
       Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12752}
-    - Class: 114
-      Script: {instanceID: 12760}
-    - Class: 114
-      Script: {instanceID: 12820}
-    - Class: 114
-      Script: {instanceID: 12850}
-    - Class: 114
-      Script: {instanceID: 12992}
-    - Class: 114
       Script: {instanceID: 12996}
-    - Class: 114
-      Script: {instanceID: 13242}
-    - Class: 114
-      Script: {instanceID: 13486}
     - Class: 114
       Script: {instanceID: 13710}
     - Class: 114
-      Script: {instanceID: 13828}
+      Script: {instanceID: 13840}
     - Class: 114
-      Script: {instanceID: 13888}
+      Script: {instanceID: 13890}
     - Class: 114
-      Script: {instanceID: 13980}
+      Script: {instanceID: 13982}
     - Class: 114
-      Script: {instanceID: 14132}
+      Script: {instanceID: 14458}
     - Class: 114
-      Script: {instanceID: 14152}
+      Script: {instanceID: 14466}
     - Class: 114
-      Script: {instanceID: 14182}
+      Script: {instanceID: 14514}
     - Class: 114
-      Script: {instanceID: 14456}
+      Script: {instanceID: 14566}
     - Class: 114
-      Script: {instanceID: 14610}
-    - Class: 114
-      Script: {instanceID: 14618}
-    - Class: 114
-      Script: {instanceID: 14650}
-    - Class: 114
-      Script: {instanceID: 14670}
-    - Class: 114
-      Script: {instanceID: 14722}
-    - Class: 114
-      Script: {instanceID: 14740}
+      Script: {instanceID: 14656}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 124
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
@@ -227,12 +142,6 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
-      Script: {instanceID: 0}
-    - Class: 231
-      Script: {instanceID: 0}
-    - Class: 233
-      Script: {instanceID: 0}
-    - Class: 258
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -561,6 +470,12 @@ ScriptsOnlyBuild:
     className: Demo11ColliderSlice
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IneFadeOut
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -885,6 +800,12 @@ ScriptsOnlyBuild:
     className: DemoSceneDestroyer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Slicer2D
+    className: DebugKillTime
+  - hash:
+      serializedVersion: 2
       Hash: 02aa68403d4795f4658ea3cd45821b21
     assemblyName: Assembly-CSharp.dll
     namespaceName: Slicer2D
@@ -1005,6 +926,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: a59e52baed58fd97fcc969f812eb0d6c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: IneSpawn
+  - hash:
+      serializedVersion: 2
       Hash: a0a6e67ef02434342bbaa4095f6c2efa
     assemblyName: Assembly-CSharp.dll
     namespaceName: A_rosuko.ObjectPool
@@ -1027,6 +954,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: Slicer2D
+    className: IneSliceEvent
   - hash:
       serializedVersion: 2
       Hash: a63fc1a3b035e5a0b5839cd7f7b3086e
@@ -1125,5 +1058,5 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 13
   scenePathNames:
-  - Assets/FunkyCode/Demos - SmartSlicer2D/MainDemo.unity
+  - Assets/Scenes/SampleScene.unity
   playerPath: "C:/Users/masa0/OneDrive/\u30C7\u30B9\u30AF\u30C8\u30C3\u30D7/slicetest.apk"

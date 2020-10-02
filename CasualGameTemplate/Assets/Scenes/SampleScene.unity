@@ -497,6 +497,7 @@ GameObject:
   - component: {fileID: 690948940}
   - component: {fileID: 690948939}
   - component: {fileID: 690948938}
+  - component: {fileID: 690948941}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -522,7 +523,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &690948939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -537,7 +538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
-  m_DragThreshold: 10
+  m_DragThreshold: 5
 --- !u!4 &690948940
 Transform:
   m_ObjectHideFlags: 0
@@ -552,6 +553,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &690948941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690948937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &938202229
 GameObject:
   m_ObjectHideFlags: 0
@@ -891,7 +904,7 @@ MonoBehaviour:
     customEndingsImage: 0
     customEndingImageMaterial: {fileID: 0}
   input:
-    multiTouch: 1
+    multiTouch: 0
   linearControllerObject:
     input:
       multiTouch: 1
