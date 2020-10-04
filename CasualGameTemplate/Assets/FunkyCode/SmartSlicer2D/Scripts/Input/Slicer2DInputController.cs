@@ -116,6 +116,7 @@ public class Slicer2DInputController {
 
 	///// Default Input Update /////
 	public void Update() {
+
 		if (multiTouch) {
 			if (Input.touchCount > 0) {
 				useTouch = true;

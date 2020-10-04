@@ -156,7 +156,6 @@ public class PolygonTriangulator2D : MonoBehaviour {
 
 				float GC = Slicer2D.Slicer2DSettings.GetGarbageCollector();
 				if (GC > 0 & polygon.GetArea() < GC) {
-					Debug.LogWarning("Smart Utility 2D: Garbage Collector Removed Object Because it was too small");
 					
 					return(null);
 				}

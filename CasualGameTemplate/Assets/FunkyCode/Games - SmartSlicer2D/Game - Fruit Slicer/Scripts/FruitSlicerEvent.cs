@@ -10,15 +10,10 @@ namespace Slicer2D {
 			slicer.AddResultEvent(SliceEvent);
 		}
 		
-		//オブジェクトをスライスしたら
-		void SliceEvent(Slice2D slice)
-		{
+		void SliceEvent(Slice2D slice){
 			FruitSlicerGameManager.instance.score += 15;
 
-			//スライスされた全オブジェクトを読み込み
 			foreach(GameObject g in slice.GetGameObjects()) {
-				
-				//はじけてるかんをだす
 				Vector3 pos = g.transform.position;
 				pos.z = Random.Range(pos.z, 50);
 				g.transform.position = pos;
@@ -30,11 +25,9 @@ namespace Slicer2D {
 				//PolygonCollider2D collider = g.GetComponent<PolygonCollider2D>();
 				//collider.isTrigger = false;
 
-				//スライスを不可にする
 				Slicer2D slicer = g.GetComponent<Slicer2D>();
 				slicer.enabled = false;
 
-				//オブジェクトフェードアウト
 				slicer.gameObject.AddComponent<FruitSlicerFadeAway>();
 
 				//ColliderLineRenderer2D lineRenderer = g.GetComponent<ColliderLineRenderer2D>();

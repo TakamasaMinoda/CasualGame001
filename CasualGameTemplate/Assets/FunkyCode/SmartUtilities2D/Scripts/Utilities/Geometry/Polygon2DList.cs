@@ -43,7 +43,6 @@ public class Polygon2DList : Polygon2D {
 			}
 
 			if (Vector2D.Distance(pair.A, pair.B) < closePrecision) {
-				Debug.LogWarning("Smart Utility 2D: Polygon points are too close");
 				list.Remove(pair.A);
 			} else {
 				pair.A = pair.B;

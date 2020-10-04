@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - DemoBackgroundManager
+    - DemoFollowMouse
     - DivideShadowScript
     - IneSpawn
     - Mesh2D
@@ -32,7 +33,6 @@ ScriptsOnlyBuild:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
     UnityEngine.UI.dll:
-    - UnityEngine.EventSystems.BaseInput
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.AspectRatioFitter
@@ -102,6 +102,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12348}
     - Class: 114
+      Script: {instanceID: 12366}
+    - Class: 114
       Script: {instanceID: 12474}
     - Class: 114
       Script: {instanceID: 12694}
@@ -119,8 +121,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14458}
     - Class: 114
       Script: {instanceID: 14466}
-    - Class: 114
-      Script: {instanceID: 14514}
     - Class: 114
       Script: {instanceID: 14566}
     - Class: 114

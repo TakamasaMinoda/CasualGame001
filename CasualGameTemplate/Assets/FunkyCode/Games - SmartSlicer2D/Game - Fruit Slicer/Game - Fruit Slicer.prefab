@@ -450,11 +450,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 72
+    m_FontSize: 128
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 72
+    m_MaxSize: 128
     m_Alignment: 0
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -514,572 +514,6 @@ Transform:
   m_Father: {fileID: 4999865667651762}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1255291656168664
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 224551188337038630}
-  - component: {fileID: 114159362750182102}
-  m_Layer: 5
-  m_Name: Controller
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &224551188337038630
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255291656168664}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 4435152146856014}
-  m_Father: {fileID: 4961944121238544}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325.5, y: 183}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &114159362750182102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1255291656168664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 548b53f71fd55c243a31b043dd6ca92c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sliceType: 8
-  sliceLayer:
-    layer: 0
-    layers: 00000000000000000000
-  visuals:
-    lineEndingType: 0
-    lineEndingEdgeCount: 6
-    drawSlicer: 0
-    visualScale: 1
-    lineWidth: 1
-    lineEndWidth: 1
-    zPosition: 0
-    slicerColor: {r: 1, g: 1, b: 1, a: 1}
-    lineBorder: 1
-    lineEndSize: 0.5
-    vertexSpace: 0.25
-    borderScale: 2
-    minVertexDistance: 1
-    customMaterial: 0
-    customFillMaterial: {fileID: 0}
-    customBoarderMaterial: {fileID: 0}
-    sortingOrder: 0
-    sortingLayerName: 
-    customEndingsImage: 0
-    customEndingImageMaterial: {fileID: 0}
-  input:
-    multiTouch: 1
-  linearControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    startedSlice: 0
-    endSliceIfPossible: 0
-    startSliceIfPossible: 0
-    strippedLinear: 0
-    minVertexDistance: 1
-    displayCollisions: 0
-    sliceJoints: 0
-    autocomplete: 0
-    autocompleteDisplay: 0
-    autocompleteDistance: 1
-    addForce: 1
-    addForceAmount: 5
-  complexControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    complexSliceType: 1
-    autocomplete: 0
-    autocompleteDisplay: 0
-    autocompleteDistance: 1
-    minVertexDistance: 1
-    endSliceIfPossible: 0
-    startSliceIfPossible: 0
-    sliceJoints: 0
-    addForce: 1
-    addForceAmount: 5
-  linearCutControlelrObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    cutSize: 0.5
-  complexCutControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    cutSize: 0.5
-    minVertexDistance: 1
-  linearTrackedControlelrObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-  complexTrackedControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    complexSliceType: 1
-    minVertexDistance: 1
-  linearTrailControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    trailRenderer:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    trailRendererCount: 1
-    addForce: 1
-    addForceAmount: 5
-  complexTrailControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    trailRenderer:
-    - {fileID: 96517239981879602}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    trailRendererCount: 1
-    addForce: 1
-    addForceAmount: 5
-  polygonControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    polygonType: 1
-    polygonSize: 1
-    polygonDestroy: 1
-    edgeCount: 30
-  createControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    createType: 0
-    polygonType: 1
-    polygonSize: 1
-    edgeCount: 30
-    material: {fileID: 0}
-  complexClickControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    complexSliceType: 1
-    pointsLimit: 3
-    sliceJoints: 0
-    endSliceIfPossible: 0
-    addForce: 1
-    addForceAmount: 5
-  pointControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    sliceRotation: 0
-  explodeControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    addForce: 1
-    addForceAmount: 5
-    explodeFromPoint: 0
-  mergerComplexControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    complexSliceType: 1
-    autocomplete: 0
-    autocompleteDisplay: 0
-    autocompleteDistance: 1
-    minVertexDistance: 1
-    endSliceIfPossible: 0
-    startSliceIfPossible: 0
-  mergerPolygonControllerObject:
-    input:
-      multiTouch: 1
-    visuals:
-      lineEndingType: 0
-      lineEndingEdgeCount: 6
-      drawSlicer: 1
-      visualScale: 1
-      lineWidth: 1
-      lineEndWidth: 1
-      zPosition: 0
-      slicerColor: {r: 1, g: 1, b: 1, a: 1}
-      lineBorder: 1
-      lineEndSize: 0.5
-      vertexSpace: 0.25
-      borderScale: 2
-      minVertexDistance: 1
-      customMaterial: 0
-      customFillMaterial: {fileID: 0}
-      customBoarderMaterial: {fileID: 0}
-      sortingOrder: 0
-      sortingLayerName: 
-      customEndingsImage: 0
-      customEndingImageMaterial: {fileID: 0}
-    sliceLayer:
-      layer: 0
-      layers: 0000000000000000
-    polygonType: 1
-    polygonSize: 1
-    edgeCount: 30
-  UIBlocking: 1
 --- !u!1 &1330467976695254
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,8 +822,8 @@ RectTransform:
   m_Father: {fileID: 224071808288650270}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.0097, y: 0.84714437}
-  m_AnchorMax: {x: 0.089700006, y: 0.9893666}
+  m_AnchorMin: {x: 0.0097, y: 0.87144995}
+  m_AnchorMax: {x: 0.089700006, y: 0.91644996}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1530,84 +964,128 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &3376017690162756237
+--- !u!1001 &5808555023200562823
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 224551188337038630}
+    m_TransformParent: {fileID: 4961944121238544}
     m_Modifications:
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 5807488109791627871, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_Name
+      value: Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -275.5
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -155
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.5
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3376582767584697533, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
         type: 3}
-      propertyPath: m_Name
-      value: Trail
+      propertyPath: m_AnchoredPosition.x
+      value: 325.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0d8d0a965263d16409aeaa18e9e34df6, type: 3}
---- !u!4 &4435152146856014 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3374822902538502851, guid: 0d8d0a965263d16409aeaa18e9e34df6,
+  m_SourcePrefab: {fileID: 100100000, guid: 5bb4f62849db42e44b35f33453b3b0d6, type: 3}
+--- !u!224 &224551188337038630 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6017343574181854113, guid: 5bb4f62849db42e44b35f33453b3b0d6,
     type: 3}
-  m_PrefabInstance: {fileID: 3376017690162756237}
-  m_PrefabAsset: {fileID: 0}
---- !u!96 &96517239981879602 stripped
-TrailRenderer:
-  m_CorrespondingSourceObject: {fileID: 3426363936902466495, guid: 0d8d0a965263d16409aeaa18e9e34df6,
-    type: 3}
-  m_PrefabInstance: {fileID: 3376017690162756237}
+  m_PrefabInstance: {fileID: 5808555023200562823}
   m_PrefabAsset: {fileID: 0}

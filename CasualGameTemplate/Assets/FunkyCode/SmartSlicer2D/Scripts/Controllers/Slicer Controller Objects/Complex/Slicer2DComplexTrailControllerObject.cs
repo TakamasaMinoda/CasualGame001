@@ -4,7 +4,8 @@ using UnityEngine;
 
 	namespace Slicer2D {
 	[System.Serializable]
-	public class Slicer2DComplexTrailControllerObject : Slicer2DControllerObject {
+	public class Slicer2DComplexTrailControllerObject : Slicer2DControllerObject
+	{
 		public ComplexSlicerTrail[] complexTrail = new ComplexSlicerTrail[10];
 		public Vector3[][] trailPositions = new Vector3[10][];
 
@@ -12,9 +13,10 @@ using UnityEngine;
 		public int trailRendererCount = 1;
 
 		public bool addForce = true;
-		public float addForceAmount = 5f;
+		[SerializeField]public float addForceAmount = 150;
 
-		public void Initialize() {
+		public void Initialize()
+		{
 			for(int id = 0; id < 10; id++) {
 				trailPositions[id] = new Vector3[500];
 				complexTrail[id] = new ComplexSlicerTrail();

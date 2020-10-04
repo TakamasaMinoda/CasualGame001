@@ -25,8 +25,7 @@ using UnityEngine.UI;
 		
 			foreach(Slicer2D slicer in Slicer2D.GetListCopy()) {
 				if (Math2D.PolyCollidePoly(slicer.shape.GetWorld(), cameraPolygon) == false) {
-					if (slicer.enabled == true)
-					{
+					if (slicer.enabled == true) {
 						lives --;
 						if (lives >= 0) {
 							SpriteRenderer sr = livesObjects[lives].GetComponent<SpriteRenderer>();

@@ -217,10 +217,14 @@
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\Scripts\Utilities\VirtualTransform.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UICanvasScale.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UITextScale.cs" />
-    <Compile Include="Assets\MainGame\DebugKillTime.cs" />
-    <Compile Include="Assets\MainGame\Scripts\IneFadeOut.cs" />
+    <Compile Include="Assets\MainGame\Scripts\DebugKillTime.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Enemy.cs" />
+    <Compile Include="Assets\MainGame\Scripts\EnemySliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\MainGame\Scripts\FadeOut.cs" />
     <Compile Include="Assets\MainGame\Scripts\IneSliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\IneSpawn.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Score.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolManager_sample.cs" />
@@ -402,6 +406,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>C:/CasualGame001/CasualGameTemplate/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -839,7 +846,12 @@
       <HintPath>C:/CasualGame001/CasualGameTemplate/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{6C4AD250-54F8-CFCD-6C7C-68B1C86B39E4}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

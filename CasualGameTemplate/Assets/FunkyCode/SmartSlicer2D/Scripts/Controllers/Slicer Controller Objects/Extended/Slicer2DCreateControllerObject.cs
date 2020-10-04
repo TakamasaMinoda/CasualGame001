@@ -62,12 +62,15 @@ using Extensions;
 			CreatePolygon (newPolygon, transform);
 		}
 
+		//ポリゴン生成
 		private void CreatePolygon(Polygon2D newPolygon, Transform transform) {
 			GameObject newGameObject = new GameObject ();
 			newGameObject.transform.parent = transform;
 			newGameObject.transform.position = new Vector3(0, 0, visuals.zPosition + 0.01f);
 
+			//ここで力を加えてやる
 			newGameObject.AddComponent<Rigidbody2D> ();
+			
 			newGameObject.AddComponent<ColliderLineRenderer2D> ().color = Color.black;
 
 			Slicer2D smartSlicer = newGameObject.AddComponent<Slicer2D> ();
