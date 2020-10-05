@@ -1,28 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class FadeOut : MonoBehaviour
 {
-	MeshRenderer MeshRenderer;
-	private float g_ChangeSpeed=0.5f;
+	MeshRenderer MeshRender;
+	private float g_ChangeSpeed=0.65f;
+
+	SpriteRenderer SpriteRender;
+
+	Tween g_Anim;
 
 	void Start()
 	{
-		MeshRenderer = GetComponent<MeshRenderer>();
+		MeshRender = this.gameObject.GetComponent<MeshRenderer>();
+		SpriteRender = this.gameObject.GetComponent<SpriteRenderer>();
+
+		if (MeshRender)
+		{
+			MeshRender.sharedMaterial.color = new Color(1, 1, 1, 1);
+			g_Anim = DOTween.ToAlpha(() => MeshRender.sharedMaterial.color, color => MeshRender.sharedMaterial.color = color, 0.0f, 1.5f);
+		}
+		if (SpriteRender)
+		{
+			SpriteRender.color = new Color(1, 1, 1, 1);
+			g_Anim = DOTween.ToAlpha(() => SpriteRender.color, color => SpriteRender.color = color, 0.0f, 1.5f);
+		}
 	}
 
 	void Update()
 	{
-		Color color = MeshRenderer.sharedMaterial.color;
-		
-		if (color.a < 0.01f)
-		{
-			Debug.Log("FadeによってDestroy");
-			Destroy(this.gameObject);
-		}
-
-		MeshRenderer.sharedMaterial.color = Color.Lerp(color, new Color(1, 1, 1, 0), Time.deltaTime* g_ChangeSpeed);
-
+		g_Anim.OnComplete(() => Destroy(this.gameObject));
 	}
 }

@@ -269,10 +269,10 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="DOTween">
-      <HintPath>C:/CasualGame001/CasualGameTemplate/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+      <HintPath>C:/CasualGame001/CasualGameTemplate/Assets/ObjectPool/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
     </Reference>
     <Reference Include="DOTweenEditor">
-      <HintPath>C:/CasualGame001/CasualGameTemplate/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+      <HintPath>C:/CasualGame001/CasualGameTemplate/Assets/ObjectPool/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>C:/CasualGame001/CasualGameTemplate/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
@@ -720,10 +720,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{6C4AD250-54F8-CFCD-6C7C-68B1C86B39E4}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{46DBB674-33CC-CF48-7193-FA662419E976}</Project>
       <Name>Assembly-CSharp</Name>

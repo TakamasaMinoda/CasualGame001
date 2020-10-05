@@ -13,44 +13,55 @@ namespace Slicer2D
 			Slicer2D slicer = GetComponent<Slicer2D>();
 			slicer.AddResultEvent(SliceEvent);
 			g_ScoreTexObj = GameObject.Find("ScoreText");
+			if (GetComponent<SpriteRenderer>())
+			{
+				GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+			}
 		}
 
 		//オブジェクトをスライスしたら
 		void SliceEvent(Slice2D slice)
 		{
-			
+
 			//スライスされた全オブジェクトを読み込み
 			foreach (GameObject parts in slice.GetGameObjects())
 			{
+				Rigidbody2D rb;
+				if (rb = parts.GetComponent<Rigidbody2D>())
+				{
+					parts.GetComponent<PolygonCollider2D>().isTrigger = true;
+					rb.freezeRotation=true;
+					rb.gravityScale = 1.0f;
+					rb.AddForce(new Vector2(Random.Range(-50,50),100));
+				}
+				
 				//スライスを不可にする
 				Slicer2D slicer = parts.GetComponent<Slicer2D>();
 				slicer.enabled = false;
+
+				//コメのスライスを不可にする
+				GameObject[] Rices = GameObject.FindGameObjectsWithTag("Rice");
+				
+				foreach (GameObject a in Rices)
+				{
+					Slicer2D RiceSlicer = a.GetComponent<Slicer2D>();
+					//RiceSlicer.enabled = false;
+					if (!a.gameObject.GetComponent<FadeOut>())
+					{
+						a.gameObject.AddComponent<FadeOut>();
+					} 
+				}
 
 				//オブジェクトフェードアウト
 				slicer.gameObject.AddComponent<FadeOut>();
 			}
 		}
-
-		public void DestroyIne(GameObject _obj)
-		{
-			//Rigidbody2D rb = _obj.GetComponent<Rigidbody2D>();
-			//rb.AddForce(new Vector2(0, Random.Range(-100, -200)));
-
-			//スライスを不可にする
-			Slicer2D slicer = _obj.GetComponent<Slicer2D>();
-			slicer.enabled = false;
-
-			//オブジェクトフェードアウト
-			slicer.gameObject.AddComponent<FadeOut>();
-		}
-
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.gameObject.tag == "Basket")
 			{
 				//スコア追加
 				g_ScoreTexObj.GetComponent<Score>().AddScore(100);
-
 			}
 		}
 	}

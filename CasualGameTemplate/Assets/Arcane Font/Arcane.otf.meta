@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d26e781b2922a754cb1291134d7725ab
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arcane
+  fontNames:
+  - Arcane
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 52d61825bc671244db17a24f60b36f21, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

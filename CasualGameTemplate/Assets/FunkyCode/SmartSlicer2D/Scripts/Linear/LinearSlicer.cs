@@ -480,7 +480,7 @@ namespace Slicer2D {
 					default:
 
 						if (Slicer2D.Debug.enabled) {
-							Debug.LogWarning("Slicer2D: Linear Slice with " + collisionCount + " collision points");
+							//Debug.LogWarning("Slicer2D: Linear Slice with " + collisionCount + " collision points");
 						}
 						break;
 				}

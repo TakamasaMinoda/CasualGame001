@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: 3c86b42b4c2f8fa4a8d3f5763cf70953
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Arcane
+  fontNames:
+  - Arcane
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 0357ef948e857b045b799c4f7b1f0157, type: 3}
+  - {fileID: 12800000, guid: 52d61825bc671244db17a24f60b36f21, type: 3}
+  - {fileID: 12800000, guid: 3b0b68e568609804bb607cd1e84617ae, type: 3}
+  - {fileID: 12800000, guid: d26e781b2922a754cb1291134d7725ab, type: 3}
+  - {fileID: 12800000, guid: 49a6a1bf0ab5ded49afdf1e461c465db, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -30,7 +30,7 @@ namespace Slicer2D
 				gameObject.GetComponent<Enemy>().SetCutted();
 
 				Rigidbody2D rb = parts.GetComponent<Rigidbody2D>();
-				rb.AddForce(new Vector2(Random.Range(100, -100), Random.Range(100,-100)));
+				rb.AddForce(new Vector2(Random.Range(300, -300),100));
 
 				//オブジェクトフェードアウト
 				//parts.gameObject.AddComponent<FadeOut>();
