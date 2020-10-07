@@ -20,20 +20,36 @@ namespace Slicer2D
 		//オブジェクトをスライスしたら
 		void SliceEvent(Slice2D slice)
 		{
-			//スコア追加
-			g_ScoreTexObj.GetComponent<Score>().AddScore(100);
-
 			//スライスされた全オブジェクトを読み込み
 			foreach (GameObject parts in slice.GetGameObjects())
 			{
-				//スケールアニメーション止めるよう
-				gameObject.GetComponent<Enemy>().SetCutted();
+				Rigidbody2D rb;
+				if (rb = parts.GetComponent<Rigidbody2D>())
+				{
+					parts.GetComponent<PolygonCollider2D>().isTrigger = true;
+					rb.freezeRotation = true;
+					rb.gravityScale = 1.0f;
+					rb.AddForce(new Vector2(Random.Range(-50, 50), 100));
+				}
 
-				Rigidbody2D rb = parts.GetComponent<Rigidbody2D>();
-				rb.AddForce(new Vector2(Random.Range(300, -300),100));
+				//スライスを不可にする
+				Slicer2D slicer = parts.GetComponent<Slicer2D>();
+				slicer.enabled = false;
 
 				//オブジェクトフェードアウト
-				//parts.gameObject.AddComponent<FadeOut>();
+				if (!slicer.gameObject.GetComponent<FadeOut>())
+				{
+					parts.gameObject.AddComponent<FadeOut>();
+				}
+			}
+		}
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (other.gameObject.tag == "Basket")
+			{
+				//スコア追加
+				g_ScoreTexObj.GetComponent<Score>().AddScore(500);
 			}
 		}
 	}

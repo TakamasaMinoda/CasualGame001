@@ -41,19 +41,23 @@ namespace Slicer2D
 
 				//コメのスライスを不可にする
 				GameObject[] Rices = GameObject.FindGameObjectsWithTag("Rice");
-				
+
 				foreach (GameObject a in Rices)
 				{
 					Slicer2D RiceSlicer = a.GetComponent<Slicer2D>();
 					//RiceSlicer.enabled = false;
 					if (!a.gameObject.GetComponent<FadeOut>())
 					{
+						Debug.Log("バグ");
 						a.gameObject.AddComponent<FadeOut>();
-					} 
+					}
 				}
 
 				//オブジェクトフェードアウト
-				slicer.gameObject.AddComponent<FadeOut>();
+				if (!slicer.gameObject.GetComponent<FadeOut>())
+				{
+					slicer.gameObject.AddComponent<FadeOut>();
+				}
 			}
 		}
 		private void OnTriggerEnter2D(Collider2D other)

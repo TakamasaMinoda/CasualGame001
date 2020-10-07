@@ -28,7 +28,7 @@ public class Score : MonoBehaviour
 		g_Num += _Num;
 		if (ScoreText)
 		{ 
-			ScoreText.text = "スコア : " + g_Num.ToString() + "点";
+			ScoreText.text = "スコア : " + g_Num.ToString("D4") + "点";
 		}
 	}
 }

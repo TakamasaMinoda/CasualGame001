@@ -81,7 +81,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275299154751445128}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -151,8 +151,7 @@ GameObject:
   - component: {fileID: 7064919835426352343}
   - component: {fileID: 587517089573024598}
   - component: {fileID: 2365869139596367339}
-  - component: {fileID: 2349588335512756066}
-  - component: {fileID: 8104121518795227261}
+  - component: {fileID: -2391278758186578030}
   m_Layer: 0
   m_Name: Ine 1
   m_TagString: Ine
@@ -458,53 +457,15 @@ PolygonCollider2D:
       - {x: -0.085, y: -3.1299999}
       - {x: -0.055, y: -3.06}
       - {x: -0.024999999, y: -2.96}
---- !u!114 &2349588335512756066
+--- !u!114 &-2391278758186578030
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4512625998552732067, guid: dcbefc41e70b0804f973ef9bb3bbce9f,
-    type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1983492416478557505}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d57bfb5a556c741a71b82d65a1e10e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textureType: 0
-  slicingLayer: 0
-  colliderType: 0
-  materialSettings:
-    triangulation: 0
-    material: {fileID: 0}
-    sideMaterial: {fileID: 0}
-    scale: {x: 1, y: 1}
-    offset: {x: 0, y: 0}
-    depth: 1
-    batchMaterial: 0
-  shapeType: 0
-  instantiateMethod: 0
-  centerOfSlice: 0
-  recalculateMass: 0
-  supportJoints: 0
-  anchor:
-    enable: 1
-    anchorsList:
-    - {fileID: 6815689968736635432}
-    anchorType: 0
-    anchorColliders:
-    - {fileID: 6815689968736635432}
-  afterSliceRemoveOrigin: 1
---- !u!114 &8104121518795227261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4512625998552732071, guid: dcbefc41e70b0804f973ef9bb3bbce9f,
-    type: 3}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1983492416478557505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfca63fee51a46643b469f95dc225a5e, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d86e27ba164d524b994e80f417aaaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

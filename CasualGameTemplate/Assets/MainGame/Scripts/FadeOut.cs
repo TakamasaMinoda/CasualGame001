@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
+[DisallowMultipleComponent]
 public class FadeOut : MonoBehaviour
 {
 	MeshRenderer MeshRender;
-	private float g_ChangeSpeed=0.65f;
+	private float g_ChangeSpeed=1.5f;
 
 	SpriteRenderer SpriteRender;
 
@@ -20,12 +21,12 @@ public class FadeOut : MonoBehaviour
 		if (MeshRender)
 		{
 			MeshRender.sharedMaterial.color = new Color(1, 1, 1, 1);
-			g_Anim = DOTween.ToAlpha(() => MeshRender.sharedMaterial.color, color => MeshRender.sharedMaterial.color = color, 0.0f, 1.5f);
+			g_Anim = DOTween.ToAlpha(() => MeshRender.sharedMaterial.color, color => MeshRender.sharedMaterial.color = color, 0.0f, g_ChangeSpeed);
 		}
 		if (SpriteRender)
 		{
 			SpriteRender.color = new Color(1, 1, 1, 1);
-			g_Anim = DOTween.ToAlpha(() => SpriteRender.color, color => SpriteRender.color = color, 0.0f, 1.5f);
+			g_Anim = DOTween.ToAlpha(() => SpriteRender.color, color => SpriteRender.color = color, 0.0f, g_ChangeSpeed);
 		}
 	}
 

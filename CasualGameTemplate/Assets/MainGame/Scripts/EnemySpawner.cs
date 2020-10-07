@@ -7,17 +7,28 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] GameObject g_Monster;
 	int frame;
 
-    void Start()
-    {
+	bool g_bStopSpawn;
 
+	void Start()
+    {
+		frame = 0;
+		g_bStopSpawn = false;
 	}
 
     void FixedUpdate()
     {
-		frame++;
-		if (frame%800==0)
+		if (!g_bStopSpawn)
 		{
-			Instantiate(g_Monster);
+			frame++;
+			if (frame % 800 == 0)
+			{
+				Instantiate(g_Monster);
+			}
 		}
     }
+
+	public void StopSpawn()
+	{
+		g_bStopSpawn = true;
+	}
 }
