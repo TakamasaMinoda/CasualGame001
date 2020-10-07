@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8559567703766345856}
   - component: {fileID: 8969708952950730544}
   - component: {fileID: 3267021568204939460}
+  - component: {fileID: 5082053484956820870}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Monster
@@ -110,6 +111,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aab81590ab84dcf42ab3428864f12a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentSize: 0
+  currentSizePercent: 0
 --- !u!114 &8969708952950730544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -144,10 +147,7 @@ MonoBehaviour:
     - {fileID: 5327728837630557401}
     anchorType: 0
     anchorColliders:
-    - {fileID: 0}
     - {fileID: 5327728837630557401}
-    - {fileID: 0}
-    - {fileID: 0}
   afterSliceRemoveOrigin: 1
 --- !u!60 &3267021568204939460
 PolygonCollider2D:
@@ -475,6 +475,20 @@ PolygonCollider2D:
       - {x: -0.26999998, y: -4.02}
       - {x: -0.16, y: -4.02}
       - {x: 0.17, y: -4.0099998}
+--- !u!114 &5082053484956820870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 730859376948985335}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82773a37c7ef114ea057ccba576c121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentSize: 0
+  currentSizePercent: 0
 --- !u!1001 &8357092789687403986
 PrefabInstance:
   m_ObjectHideFlags: 0

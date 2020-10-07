@@ -7,6 +7,10 @@ namespace Slicer2D
 	public class RiceSliceEvent : MonoBehaviour
 	{
 		GameObject g_ScoreTexObj;
+		[SerializeField, Header("米の番号")] int g_RiceID;
+
+		[SerializeField, Header("現在の大きさ")] double currentSize = 0;
+		[SerializeField, Header("現在の大きさのパーセンテージ")] float currentSizePercent = 0;
 
 		void Start()
 		{
@@ -16,6 +20,13 @@ namespace Slicer2D
 			if (GetComponent<SpriteRenderer>())
 			{
 				GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1);
+			}
+
+			//米の大きさを取得
+			if (currentSize == 0)
+			{
+				currentSize = Polygon2DList.CreateFromGameObject(gameObject)[0].ToWorldSpace(transform).GetArea();
+				currentSizePercent = (float)System.Math.Round((currentSize / GameObject.Find("DataHolder").GetComponent<Data>().GetOriginalRiceSize(g_RiceID)) * 100);
 			}
 		}
 
@@ -68,7 +79,11 @@ namespace Slicer2D
 			if (other.gameObject.tag == "Basket")
 			{
 				//スコア追加
-				g_ScoreTexObj.GetComponent<Score>().AddScore(300);
+				//元の大きさと現在の大きさの％でスコアを決める % = 今の大きさ/元の大きさ*100
+				float Ten = currentSizePercent * 10;
+
+				//スコア追加
+				g_ScoreTexObj.GetComponent<Score>().AddScore((int)Ten);
 			}
 		}
 	}
