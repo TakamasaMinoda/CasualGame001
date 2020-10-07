@@ -24,7 +24,6 @@ public class Data : MonoBehaviour
 		return originalBurdSize;
 	}
 
-
 	public double GetOriginalRiceSize(int _ID)
 	{
 		return originalRiceSize[_ID];

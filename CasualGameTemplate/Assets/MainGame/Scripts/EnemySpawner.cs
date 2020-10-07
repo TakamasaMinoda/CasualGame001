@@ -20,7 +20,7 @@ public class EnemySpawner : MonoBehaviour
 		if (!g_bStopSpawn)
 		{
 			frame++;
-			if (frame % 800 == 0)
+			if (frame % 150 == 0)
 			{
 				Instantiate(g_Monster);
 			}

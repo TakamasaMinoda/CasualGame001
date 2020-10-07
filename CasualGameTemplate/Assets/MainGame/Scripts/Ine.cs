@@ -4,31 +4,30 @@ using UnityEngine;
 
 public class Ine : MonoBehaviour
 {
-	GameObject[] g_Rices;
-	List<bool> g_isCutted = new List<bool>();
-	int g_CutCount;
+	[SerializeField, Header("米が切られたかどうか")] int g_Count=0;
+	[SerializeField, Header("米が切られたかどうか")] List<bool> g_isCutted = new List<bool>();
+	[SerializeField, Header("切った数")] int g_CutCount;
+	[SerializeField, Header("スクリプトを止める")] bool StopScript;
 
-	bool StopScript;
-
-	// Start is called before the first frame update
 	void Start()
 	{
-		//自動でコメオブジェクトを入れる
-		g_Rices = GameObject.FindGameObjectsWithTag("Rice");
-		
-		//要素分だけリストに追加する
-		for (int i=0; i< g_Rices.Length;i++)
+		//子オブジェクトの数分だけ回す
+		foreach (Transform child in transform)
 		{
 			g_isCutted.Add(false);
+			g_Count++;
 		}
-
 		//現在のカウントを0にする
 		g_CutCount = 0;
+
+		//スクリプトを止めるため変数の初期化
+		StopScript = false;
 	}
 
 	private void Update()
 	{
-		for(int i = 0; i < g_Rices.Length; i++)
+		//要素数分だけ切られているかどうかのチェックを行う
+		for(int i=0;i<g_Count;i++)
 		{
 			if(g_isCutted[i] == false)
 			{
@@ -36,29 +35,19 @@ public class Ine : MonoBehaviour
 			}
 		}
 
-		//すべての米をカットしたら
-		//オブジェクトフェードアウト
-		if (!gameObject.GetComponent<FadeOut>())
+		//稲フェードアウト
+		if (!this.gameObject.GetComponent<FadeOut>())
 		{
-			gameObject.AddComponent<FadeOut>();
+			this.gameObject.AddComponent<FadeOut>();
 		}
 
-		//米もフェードアウト
-		GameObject[] Rices = GameObject.FindGameObjectsWithTag("Rice");
-		foreach (GameObject a in Rices)
+
+		//米フェードアウト
+		foreach (Transform child in transform)
 		{
-
-			Rigidbody2D rb;
-			if (rb = a.GetComponent<Rigidbody2D>())
+			if (!child.gameObject.GetComponent<FadeOut>())
 			{
-				//重力有効
-				rb.gravityScale = 5.0f;
-			}
-
-			//米フェード
-			if (!a.gameObject.GetComponent<FadeOut>())
-			{
-				a.gameObject.AddComponent<FadeOut>();
+				child.gameObject.AddComponent<FadeOut>();
 			}
 		}
 
