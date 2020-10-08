@@ -8,13 +8,16 @@ public class Score : MonoBehaviour
 	int g_Num = 0;
 	[SerializeField]Text ScoreText;
 
+	[SerializeField,Header("野菜の数")] int Vegi;
+
+
 	private void Start()
 	{
 		ScoreText = this.gameObject.GetComponent<Text>();
-		g_Num = 0;
-		if(ScoreText)
+		Vegi = 0;
+		if (ScoreText)
 		{
-			ScoreText.text = "スコア : " + g_Num.ToString("D4") + "点";
+			ScoreText.text = "野菜の数 : " + Vegi.ToString("D2");
 		}
 	}
 
@@ -29,6 +32,15 @@ public class Score : MonoBehaviour
 		if (ScoreText)
 		{ 
 			ScoreText.text = "スコア : " + g_Num.ToString("D4") + "点";
+		}
+	}
+
+	public void AddVegi()
+	{
+		Vegi++;
+		if (ScoreText)
+		{
+			ScoreText.text = "野菜の数 : " + Vegi.ToString("D2");
 		}
 	}
 }

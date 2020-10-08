@@ -22,6 +22,8 @@ public class Ine : MonoBehaviour
 
 		//スクリプトを止めるため変数の初期化
 		StopScript = false;
+
+		//スポーン機能再開
 	}
 
 	private void Update()
@@ -50,6 +52,8 @@ public class Ine : MonoBehaviour
 				child.gameObject.AddComponent<FadeOut>();
 			}
 		}
+
+		//マシーンを止める
 
 	}
 

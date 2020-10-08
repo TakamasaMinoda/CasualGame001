@@ -32,6 +32,6 @@ public class FadeOut : MonoBehaviour
 
 	void Update()
 	{
-		g_Anim.OnComplete(() => Destroy(this.gameObject));
+		g_Anim.OnComplete(() => this.transform.parent.gameObject.GetComponent<DestroyEnemy>().Delete());
 	}
 }

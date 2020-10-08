@@ -32,7 +32,7 @@ public class LimitTime : MonoBehaviour
 			LimitText.text = "終了";
 
 			//スポーンを止める
-			GameObject.Find("IneSpawner").GetComponent<Spawner>().StopSpawn();
+			//GameObject.Find("IneSpawner").GetComponent<Spawner>().StopSpawn();
 
 			//スコアをStaticに入れる
 			GameObject.Find("DataHolder").GetComponent<Data>().SetScore(GameObject.Find("ScoreText").GetComponent<Score>().GetScore());

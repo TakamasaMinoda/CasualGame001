@@ -29,6 +29,7 @@ public class IneSpawn : MonoBehaviour
 				switch (g_NowPaterrn)
 				{
 					case 0:
+						//オブジェクトプール用にする
 						Instantiate(g_PrefabIne[0]);
 
 						Instantiate(g_PrefabRice[0]);
@@ -37,6 +38,7 @@ public class IneSpawn : MonoBehaviour
 						break;
 
 					case 1:
+						//オブジェクトプール用にする
 						Instantiate(g_PrefabIne[0]);
 
 						Instantiate(g_PrefabRice[0]);
@@ -45,6 +47,7 @@ public class IneSpawn : MonoBehaviour
 						break;
 
 					case 2:
+						//オブジェクトプール用にする
 						Instantiate(g_PrefabIne[0]);
 
 						Instantiate(g_PrefabRice[0]);

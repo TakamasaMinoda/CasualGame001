@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-	[SerializeField] GameObject g_Monster;
+	[SerializeField] GameObject[] g_Monster;
 	int frame;
+
+	[SerializeField] int[] MonsterList;
+	[SerializeField] float[] RepopTime;
 
 	bool g_bStopSpawn;
 
@@ -20,9 +23,13 @@ public class EnemySpawner : MonoBehaviour
 		if (!g_bStopSpawn)
 		{
 			frame++;
-			if (frame % 150 == 0)
+			for(int i=0; i<RepopTime.Length;i++)
 			{
-				Instantiate(g_Monster);
+				if(frame== RepopTime[i])
+				{
+					//オブジェクトプール用にする
+					Instantiate(g_Monster[MonsterList[i]],transform.position, Quaternion.identity);
+				}
 			}
 		}
     }

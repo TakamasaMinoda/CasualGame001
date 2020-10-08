@@ -62,7 +62,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\EnemyMove.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 12 - AI\DemoCanon.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 15 - Vert\Slicer2DControllerVertice.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 16 - Tutorial\Demo16Tutorial.cs" />
@@ -218,15 +217,19 @@
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\Scripts\Utilities\VirtualTransform.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UICanvasScale.cs" />
     <Compile Include="Assets\FunkyCode\SmartUtilities2D\UI\UITextScale.cs" />
-    <Compile Include="Assets\InspecterScale.cs" />
     <Compile Include="Assets\MainGame\Scripts\Data.cs" />
+    <Compile Include="Assets\MainGame\Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\MainGame\Scripts\Enemy.cs" />
+    <Compile Include="Assets\MainGame\Scripts\EnemyMove.cs" />
     <Compile Include="Assets\MainGame\Scripts\EnemySliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\MainGame\Scripts\FadeOut.cs" />
     <Compile Include="Assets\MainGame\Scripts\Ine.cs" />
     <Compile Include="Assets\MainGame\Scripts\IneSliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\IneSpawn.cs" />
+    <Compile Include="Assets\MainGame\Scripts\InspecterScale.cs" />
+    <Compile Include="Assets\MainGame\Scripts\LettuceTatle.cs" />
+    <Compile Include="Assets\MainGame\Scripts\LettuceTatleSliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\LimitTime.cs" />
     <Compile Include="Assets\MainGame\Scripts\OnClickButton.cs" />
     <Compile Include="Assets\MainGame\Scripts\Ranking.cs" />
@@ -234,6 +237,8 @@
     <Compile Include="Assets\MainGame\Scripts\ResultScore.cs" />
     <Compile Include="Assets\MainGame\Scripts\RiceSliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\Score.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Spawner.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Yasai.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolManager_sample.cs" />
@@ -244,7 +249,6 @@
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
-    <Compile Include="Assets\Spawner.cs" />
     <None Include="Assets\ObjectPool\readme.txt" />
     <None Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\FunkyCode\SmartSlicer2D\Changelog.txt" />
