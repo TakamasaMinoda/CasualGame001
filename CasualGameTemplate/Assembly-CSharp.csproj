@@ -62,6 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Cow.cs" />
+    <Compile Include="Assets\CowHead.cs" />
+    <Compile Include="Assets\CowTail.cs" />
+    <Compile Include="Assets\Fish.cs" />
+    <Compile Include="Assets\FishHead.cs" />
+    <Compile Include="Assets\FishIcon.cs" />
+    <Compile Include="Assets\FishTail.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 12 - AI\DemoCanon.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 15 - Vert\Slicer2DControllerVertice.cs" />
     <Compile Include="Assets\FunkyCode\Demos - SmartSlicer2D\Scenes\Other\Demo 16 - Tutorial\Demo16Tutorial.cs" />
@@ -231,7 +238,6 @@
     <Compile Include="Assets\MainGame\Scripts\LimitTime.cs" />
     <Compile Include="Assets\MainGame\Scripts\OnClickButton.cs" />
     <Compile Include="Assets\MainGame\Scripts\Ranking.cs" />
-    <Compile Include="Assets\MainGame\Scripts\Record.cs" />
     <Compile Include="Assets\MainGame\Scripts\ResultScore.cs" />
     <Compile Include="Assets\MainGame\Scripts\Rice00SliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\Rice01SliceEvent.cs" />
@@ -243,6 +249,7 @@
     <Compile Include="Assets\MainGame\Scripts\Spawner.cs" />
     <Compile Include="Assets\MainGame\Scripts\Spawner02.cs" />
     <Compile Include="Assets\MainGame\Scripts\Yasai.cs" />
+    <Compile Include="Assets\MeatIcon.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolManager_sample.cs" />

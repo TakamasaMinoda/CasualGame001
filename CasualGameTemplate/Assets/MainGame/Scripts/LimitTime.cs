@@ -32,7 +32,7 @@ public class LimitTime : MonoBehaviour
 			LimitText.text = "終了";
 
 			//データホルダーにスコアを保存する
-
+			GameObject.Find("DataHolder").GetComponent<Data>().SetScore();
 
 			//仮
 			SceneManager.LoadScene("Result");
@@ -47,5 +47,10 @@ public class LimitTime : MonoBehaviour
 	public float GetNowTime()
 	{
 		return g_NowTime;
+	}
+
+	public void SubLimitTime()
+	{
+		g_NowTime -= 5;
 	}
 }

@@ -23,7 +23,19 @@ public class EnemyMove : MonoBehaviour
 		{
 			if(collision.gameObject.transform.childCount!=0)
 			{
-				//米のカウントをあげる
+				//制限時間を減らす
+				GameObject.Find("LimitTime").GetComponent<LimitTime>().SubLimitTime();
+
+				//稲にカットされたと伝える
+				if (collision.gameObject.GetComponent<Ine>())
+				{
+					collision.gameObject.GetComponent<Ine>().SetCutted();
+				}
+				else
+				{
+					collision.gameObject.GetComponent<Ine002>().SetCutted();
+				}
+				
 				Destroy(collision.gameObject.transform.GetChild(0).gameObject);
 				Destroy(this.gameObject);
 			}

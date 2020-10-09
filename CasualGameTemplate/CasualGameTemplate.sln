@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{46DBB674-33CC-CF48-7193-FA662419E976}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx", "UniRx.csproj", "{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{46DBB674-33CC-CF48-7193-FA662419E976}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UniRx.Examples", "UniRx.Examples.csproj", "{92E95563-6589-3494-E367-84C9D02F961B}"
 EndProject
@@ -15,14 +15,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{46DBB674-33CC-CF48-7193-FA662419E976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46DBB674-33CC-CF48-7193-FA662419E976}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46DBB674-33CC-CF48-7193-FA662419E976}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46DBB674-33CC-CF48-7193-FA662419E976}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46DBB674-33CC-CF48-7193-FA662419E976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46DBB674-33CC-CF48-7193-FA662419E976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46DBB674-33CC-CF48-7193-FA662419E976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46DBB674-33CC-CF48-7193-FA662419E976}.Release|Any CPU.Build.0 = Release|Any CPU
 		{92E95563-6589-3494-E367-84C9D02F961B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{92E95563-6589-3494-E367-84C9D02F961B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92E95563-6589-3494-E367-84C9D02F961B}.Release|Any CPU.ActiveCfg = Release|Any CPU

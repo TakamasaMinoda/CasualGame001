@@ -38,6 +38,15 @@ public class LettuceTatle : MonoBehaviour
 		//亀の動きを止める
 		this.transform.parent.gameObject.GetComponent<EnemyMove>().StopMove();
 
+		//子どもフェードアウト
+		foreach (Transform childTransform in transform)
+		{
+			if (!this.gameObject.GetComponent<FadeOut>())
+			{
+				childTransform.gameObject.AddComponent<FadeOut>();
+			}
+		}
+
 		//亀フェードアウト
 		if (!this.gameObject.GetComponent<FadeOut>())
 		{

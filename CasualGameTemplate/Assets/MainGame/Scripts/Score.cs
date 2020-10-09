@@ -63,7 +63,7 @@ public class Score : MonoBehaviour
 	}
 
 	//魚のスコアを加算
-	public void AddFieshScore()
+	public void AddFishScore()
 	{
 		g_FishScore++;
 		if (g_ScoreText)
@@ -90,5 +90,22 @@ public class Score : MonoBehaviour
 				+ "\n魚の数 : " + g_FishScore.ToString("D2")
 				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
 		}
+	}
+
+	public int GetVegeScore()
+	{
+		return g_VegeScore;
+	}
+	public int GetRiceScore()
+	{
+		return g_RiceScore;
+	}
+	public int GetFishScore()
+	{
+		return g_FishScore;
+	}
+	public int GetMeatScore()
+	{
+		return g_MeatScore;
 	}
 }

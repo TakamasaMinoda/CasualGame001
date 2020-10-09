@@ -23,25 +23,24 @@ public class Ranking : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-		GetRanking();
+		//GetRanking();
 
-		//point = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
-		SetRanking(point);
+		//SetRanking(point);
 
-		//ランキング描画
-		for (int i = 0; i < rankingText.Length; i++)
-		{
-			rankingText[i].text = ranking[i] +" : "+ rankingValue[i].ToString("D4") + " 点 ";
-		}
+		////ランキング描画
+		//for (int i = 0; i < rankingText.Length; i++)
+		//{
+		//	rankingText[i].text = ranking[i] +" : "+ rankingValue[i].ToString("D4") + " 点 ";
+		//}
 
-		if(g_NewRecord)
-		{
-			RecordText.SetActive(true);
-		}
-		else
-		{
-			RecordText.SetActive(false);
-		}
+		//if(g_NewRecord)
+		//{
+		//	RecordText.SetActive(true);
+		//}
+		//else
+		//{
+		//	RecordText.SetActive(false);
+		//}
 	}
 
 	void GetRanking()

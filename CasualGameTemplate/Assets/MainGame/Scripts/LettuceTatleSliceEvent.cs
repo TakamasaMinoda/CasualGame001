@@ -51,6 +51,34 @@ namespace Slicer2D
 			}
 		}
 
+		private void OnTriggerEnter2D(Collider2D collision)
+		{
+			if (collision.gameObject.tag == "Basket")
+			{
+				gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+
+				//アイコンの生成
+				if (0 <= currentSizePercent && currentSizePercent < 30)
+				{
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+				}
+				else if (30 <= currentSizePercent && currentSizePercent < 70)
+				{
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+				}
+				else if (70 <= currentSizePercent && currentSizePercent < 100)
+				{
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+					Instantiate(Type, this.transform.position, Quaternion.identity);
+				}
+
+
+				Destroy(this.gameObject);
+			}
+		}
+
 		private void OnCollisionEnter2D(Collision2D collision)
 		{
 			if (collision.gameObject.tag == "Basket")
