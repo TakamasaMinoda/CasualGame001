@@ -10,7 +10,7 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] int[] MonsterList;
 	[SerializeField] float[] RepopTime;
 
-	bool g_bStopSpawn;
+	[SerializeField] bool g_bStopSpawn;
 
 	void Start()
     {
@@ -33,6 +33,10 @@ public class EnemySpawner : MonoBehaviour
 			}
 		}
     }
+	public void StartSpawn()
+	{
+		g_bStopSpawn = false;
+	}
 
 	public void StopSpawn()
 	{

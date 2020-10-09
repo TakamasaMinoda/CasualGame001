@@ -9,6 +9,8 @@ TagManager:
   - Rice
   - Monster
   - Damage
+  - Ine1
+  - Ine2
   layers:
   - Default
   - TransparentFX

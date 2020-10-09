@@ -31,11 +31,8 @@ public class LimitTime : MonoBehaviour
 		{
 			LimitText.text = "終了";
 
-			//スポーンを止める
-			//GameObject.Find("IneSpawner").GetComponent<Spawner>().StopSpawn();
+			//データホルダーにスコアを保存する
 
-			//スコアをStaticに入れる
-			GameObject.Find("DataHolder").GetComponent<Data>().SetScore(GameObject.Find("ScoreText").GetComponent<Score>().GetScore());
 
 			//仮
 			SceneManager.LoadScene("Result");

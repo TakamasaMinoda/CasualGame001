@@ -313,3 +313,6 @@ C:\CasualGame001\CasualGameTemplate\obj\Debug\Assembly-CSharp.csproj.CoreCompile
 C:\CasualGame001\CasualGameTemplate\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\CasualGame001\CasualGameTemplate\obj\Debug\Assembly-CSharp.dll
 C:\CasualGame001\CasualGameTemplate\obj\Debug\Assembly-CSharp.pdb
+C:\CasualGame001\CasualGameTemplate\Temp\bin\Debug\DOTween.dll
+C:\CasualGame001\CasualGameTemplate\Temp\bin\Debug\UniRx.pdb
+C:\CasualGame001\CasualGameTemplate\Temp\bin\Debug\DOTween.xml

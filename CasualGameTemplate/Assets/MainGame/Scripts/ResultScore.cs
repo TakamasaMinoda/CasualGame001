@@ -8,9 +8,9 @@ public class ResultScore : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		int point = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
+		//int point = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
 
-		gameObject.GetComponent<Text>().text = "スコア\n" + point.ToString("D4") + " 点";
+		//gameObject.GetComponent<Text>().text = "スコア\n" + point.ToString("D4") + " 点";
 
 	}
 }

@@ -24,6 +24,8 @@ public class Ine : MonoBehaviour
 		StopScript = false;
 
 		//スポーン機能再開
+		//マシーンを止める
+		GameObject.Find("EnemySpawn_1").GetComponent<EnemySpawner>().StartSpawn();
 	}
 
 	private void Update()
@@ -54,7 +56,7 @@ public class Ine : MonoBehaviour
 		}
 
 		//マシーンを止める
-
+		GameObject.Find("EnemySpawn_1").GetComponent<EnemySpawner>().StopSpawn();
 	}
 
 	//カウント可算とboolをtrue

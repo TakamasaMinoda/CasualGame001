@@ -5,42 +5,90 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-	int g_Num = 0;
-	[SerializeField]Text ScoreText;
+	Text g_ScoreText;
 
-	[SerializeField,Header("野菜の数")] int Vegi;
+	[SerializeField, Header("米の数")] int g_RiceScore;
+	[SerializeField,Header("野菜の数")] int g_VegeScore;
+	[SerializeField, Header("魚の数")] int g_FishScore;
+	[SerializeField, Header("肉の数")] int g_MeatScore;
 
-
+	//初期化
 	private void Start()
 	{
-		ScoreText = this.gameObject.GetComponent<Text>();
-		Vegi = 0;
-		if (ScoreText)
+		g_ScoreText = this.gameObject.GetComponent<Text>();
+		g_RiceScore = 0;
+		g_VegeScore = 0;
+		g_FishScore = 0;
+		g_MeatScore = 0;
+
+
+		if (g_ScoreText)
 		{
-			ScoreText.text = "野菜の数 : " + Vegi.ToString("D2");
+			g_ScoreText.text = 
+				 "米の数 : " + g_RiceScore.ToString("D2") 
+				+ "\n野菜の数 : " + g_VegeScore.ToString("D2")
+				+ "\n魚の数 : " + g_FishScore.ToString("D2")
+				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
 		}
 	}
 
-	public int GetScore()
+	//米のスコアを加算
+	public void AddRiceScore()
 	{
-		return g_Num;
-	}
-
-	public void AddScore(int _Num)
-	{
-		g_Num += _Num;
-		if (ScoreText)
-		{ 
-			ScoreText.text = "スコア : " + g_Num.ToString("D4") + "点";
+		g_RiceScore++;
+		if (g_ScoreText)
+		{
+			//スコア更新
+			g_ScoreText.text =
+				 "米の数 : " + g_RiceScore.ToString("D2")
+				+ "\n野菜の数 : " + g_VegeScore.ToString("D2")
+				+ "\n魚の数 : " + g_FishScore.ToString("D2")
+				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
 		}
 	}
 
-	public void AddVegi()
+	//野菜のスコアを加算
+	public void AddVegeScore()
 	{
-		Vegi++;
-		if (ScoreText)
+		g_VegeScore++;
+		if (g_ScoreText)
 		{
-			ScoreText.text = "野菜の数 : " + Vegi.ToString("D2");
+			//スコア更新
+			g_ScoreText.text =
+				 "米の数 : " + g_RiceScore.ToString("D2")
+				+ "\n野菜の数 : " + g_VegeScore.ToString("D2")
+				+ "\n魚の数 : " + g_FishScore.ToString("D2")
+				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
+		}
+	}
+
+	//魚のスコアを加算
+	public void AddFieshScore()
+	{
+		g_FishScore++;
+		if (g_ScoreText)
+		{
+			//スコア更新
+			g_ScoreText.text =
+				 "米の数 : " + g_RiceScore.ToString("D2")
+				+ "\n野菜の数 : " + g_VegeScore.ToString("D2")
+				+ "\n魚の数 : " + g_FishScore.ToString("D2")
+				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
+		}
+	}
+
+	//肉のスコアを加算
+	public void AddMeatScore()
+	{
+		g_MeatScore++;
+		if (g_ScoreText)
+		{
+			//スコア更新
+			g_ScoreText.text =
+				 "\n米の数 : " + g_RiceScore.ToString("D2")
+				+ "\n野菜の数 : " + g_VegeScore.ToString("D2")
+				+ "\n魚の数 : " + g_FishScore.ToString("D2")
+				+ "\n肉の数 : " + g_MeatScore.ToString("D2");
 		}
 	}
 }

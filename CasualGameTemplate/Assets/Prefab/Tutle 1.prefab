@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2827550919381846221}
   - component: {fileID: 2827550919381846258}
-  - component: {fileID: 6967252600017381079}
   - component: {fileID: 9045030754256634553}
+  - component: {fileID: 6967252600017381079}
   - component: {fileID: 1316846567456577768}
   m_Layer: 0
   m_Name: Ko
@@ -84,44 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6967252600017381079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2827550919381846220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d57bfb5a556c741a71b82d65a1e10e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textureType: 0
-  slicingLayer: 0
-  colliderType: 0
-  materialSettings:
-    triangulation: 0
-    material: {fileID: 0}
-    sideMaterial: {fileID: 0}
-    scale: {x: 1, y: 1}
-    offset: {x: 0, y: 0}
-    depth: 1
-    batchMaterial: 0
-  shapeType: 0
-  instantiateMethod: 0
-  centerOfSlice: 0
-  recalculateMass: 0
-  supportJoints: 0
-  anchor:
-    enable: 1
-    anchorsList:
-    - {fileID: 4275630702235678092}
-    - {fileID: 4275630702282437969}
-    anchorType: 0
-    anchorColliders:
-    - {fileID: 4275630702235678092}
-    - {fileID: 4275630702282437969}
-  afterSliceRemoveOrigin: 1
 --- !u!60 &9045030754256634553
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -251,6 +213,44 @@ PolygonCollider2D:
       - {x: -1.52, y: -1.385}
       - {x: -1.51, y: -1.375}
       - {x: -0.69948465, y: -1.375}
+--- !u!114 &6967252600017381079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827550919381846220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d57bfb5a556c741a71b82d65a1e10e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textureType: 0
+  slicingLayer: 0
+  colliderType: 0
+  materialSettings:
+    triangulation: 0
+    material: {fileID: 0}
+    sideMaterial: {fileID: 0}
+    scale: {x: 1, y: 1}
+    offset: {x: 0, y: 0}
+    depth: 1
+    batchMaterial: 0
+  shapeType: 0
+  instantiateMethod: 0
+  centerOfSlice: 0
+  recalculateMass: 0
+  supportJoints: 0
+  anchor:
+    enable: 1
+    anchorsList:
+    - {fileID: 4275630702235678092}
+    - {fileID: 4275630702282437969}
+    anchorType: 0
+    anchorColliders:
+    - {fileID: 4275630702235678092}
+    - {fileID: 4275630702282437969}
+  afterSliceRemoveOrigin: 1
 --- !u!114 &1316846567456577768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   g_ScoreTexObj: {fileID: 0}
   currentSize: 0
   currentSizePercent: 0
-  Type: {fileID: 0}
+  Type: {fileID: 4044317506355847100, guid: 4bb901329338c554c8c2feb9a778e8b3, type: 3}
 --- !u!1 &2827550919391246721
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,8 +375,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2827550919656709529}
-  - component: {fileID: 4604437644720266252}
   - component: {fileID: 5998808425066271966}
+  - component: {fileID: 4604437644720266252}
   - component: {fileID: 6881933692906408201}
   m_Layer: 0
   m_Name: Tutle 1
@@ -401,19 +401,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4604437644720266252
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2827550919656709528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9a11b9e9b877dc41a34a3c44fda5f89, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  g_WalkSpeed: 1
 --- !u!50 &5998808425066271966
 Rigidbody2D:
   serializedVersion: 4
@@ -435,6 +422,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &4604437644720266252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827550919656709528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a11b9e9b877dc41a34a3c44fda5f89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  g_WalkSpeed: 1
 --- !u!114 &6881933692906408201
 MonoBehaviour:
   m_ObjectHideFlags: 0

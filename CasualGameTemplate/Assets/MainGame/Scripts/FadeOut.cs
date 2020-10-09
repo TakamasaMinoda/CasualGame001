@@ -7,10 +7,9 @@ using DG.Tweening;
 public class FadeOut : MonoBehaviour
 {
 	MeshRenderer MeshRender;
-	private float g_ChangeSpeed=1.5f;
-
 	SpriteRenderer SpriteRender;
 
+	private float g_ChangeSpeed = 1.5f;
 	Tween g_Anim;
 
 	void Start()

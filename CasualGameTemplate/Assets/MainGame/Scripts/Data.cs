@@ -4,29 +4,35 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-	static int g_Score;
+	[SerializeField, Header("米の数")]   static int g_RiceScore;
+	[SerializeField, Header("野菜の数")] static int g_VegeScore;
+	[SerializeField, Header("魚の数")]   static int g_FishScore;
+	[SerializeField, Header("肉の数")]   static int g_MeatScore;
 
-	[SerializeField,Header("鳥の大きさ")]  double originalBurdSize = 0;
+	[SerializeField, Header("米の大きさ")] double[] originalRiceSize = new double[3];
 	[SerializeField, Header("亀の大きさ")] double OriginalTatleSize;
 
+	[SerializeField, Header("米アイコン")] GameObject g_RiceIcon;
+	[SerializeField, Header("野菜アイコン")] GameObject g_VegeIcon;
 
-	[SerializeField, Header("米の大きさ")]  double[] originalRiceSize = new double[3];
-
-	[SerializeField, Header("野菜アイコン")] GameObject VegiIcon;
-
-	public int GetScore()
+	public void SetRiceScore(int _RiceScore)
 	{
-		return g_Score;
+		g_RiceScore = _RiceScore;
 	}
 
-	public void SetScore(int _Score)
+	public void SetVegeScore(int _VegeScore)
 	{
-		g_Score = _Score;
+		g_VegeScore = _VegeScore;
 	}
 
-	public double GetOriginalBurdSize()
+	public void SetFishScore(int _FishScore)
 	{
-		return originalBurdSize;
+		g_FishScore = _FishScore;
+	}
+
+	public void SetMeatScore(int _MeatScore)
+	{
+		g_MeatScore = _MeatScore;
 	}
 
 	public double GetOriginalRiceSize(int _ID)
@@ -39,8 +45,13 @@ public class Data : MonoBehaviour
 		return OriginalTatleSize;
 	}
 
-	public GameObject GetVegiIcon()
+	public GameObject GetRiceIcon()
 	{
-		return VegiIcon;
+		return g_RiceIcon;
+	}
+
+	public GameObject GetVegeIcon()
+	{
+		return g_VegeIcon;
 	}
 }

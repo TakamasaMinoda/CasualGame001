@@ -25,7 +25,7 @@ public class Ranking : MonoBehaviour
     {
 		GetRanking();
 
-		point = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
+		//point = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
 		SetRanking(point);
 
 		//ランキング描画

@@ -5,53 +5,30 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
 	public GameObject[] g_PrefabIne;
-	public GameObject[] g_PrefabRice;
-	public GameObject[] g_PrefabMonster;
-
-	int g_NowPaterrn;
-
-	bool g_bStopSpawn;
+	float frame;
+	[SerializeField,Header("リスポーン時間")]float RespornTime;
 
 	private void Start()
 	{
-		g_bStopSpawn = false;
+		frame = 0;
 	}
 
 	private void Update()
 	{
-		if (!g_bStopSpawn)
+		//稲と米がいない場合またはモンスターがいない場合
+		if (GameObject.FindGameObjectsWithTag("Ine1").Length == 0)
 		{
-			//稲と米がいない場合またはモンスターがいない場合
-			if (GameObject.FindGameObjectsWithTag("Ine").Length == 0 
-				&& GameObject.FindGameObjectsWithTag("Rice").Length == 0
-				&& GameObject.FindGameObjectsWithTag("Monster").Length == 0)
+			//フレームカウント
+			frame += Time.deltaTime;
+
+			//3s後
+			if (frame > RespornTime)
 			{
-				//乱数で種類を決定
-				g_NowPaterrn = Random.Range((int)0, (int)2);
+				//オブジェクトプール用にする
+				Instantiate(g_PrefabIne[0], this.transform.position, Quaternion.identity);
 
-				switch (g_NowPaterrn)
-				{
-					case 0:
-						//オブジェクトプール用にする
-						Instantiate(g_PrefabIne[0]);
-
-						Instantiate(g_PrefabRice[0]);
-						Instantiate(g_PrefabRice[1]);
-						Instantiate(g_PrefabRice[2]);
-						break;
-
-					case 1:
-						//オブジェクトプール用にする
-						Instantiate(g_PrefabMonster[0]);
-						break;
-				}
-
+				frame = 0;
 			}
 		}
-	}
-
-	public void StopSpawn()
-	{
-		g_bStopSpawn = true;
 	}
 }

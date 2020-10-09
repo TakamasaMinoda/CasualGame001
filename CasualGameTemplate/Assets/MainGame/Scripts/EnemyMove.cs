@@ -15,4 +15,18 @@ public class EnemyMove : MonoBehaviour
 	{
 		GetComponent<Rigidbody2D>().Sleep();
 	}
+
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		//稲に触れた時、米をなくす
+		if(collision.gameObject.tag=="Ine1" || collision.gameObject.tag == "Ine2")
+		{
+			if(collision.gameObject.transform.childCount!=0)
+			{
+				//米のカウントをあげる
+				Destroy(collision.gameObject.transform.GetChild(0).gameObject);
+				Destroy(this.gameObject);
+			}
+		}
+	}
 }

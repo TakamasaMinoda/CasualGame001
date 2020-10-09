@@ -8,7 +8,7 @@ public class OnClickButton : MonoBehaviour
 {
 	public void LoadMain()
 	{
-		SceneManager.LoadScene("Main");
+		SceneManager.LoadScene("Main_ver2");
 	}
 
 	public void Quit()

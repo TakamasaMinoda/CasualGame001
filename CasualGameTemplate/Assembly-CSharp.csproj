@@ -221,13 +221,11 @@
     <Compile Include="Assets\MainGame\Scripts\DestroyEnemy.cs" />
     <Compile Include="Assets\MainGame\Scripts\Enemy.cs" />
     <Compile Include="Assets\MainGame\Scripts\EnemyMove.cs" />
-    <Compile Include="Assets\MainGame\Scripts\EnemySliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\EnemySpawner.cs" />
     <Compile Include="Assets\MainGame\Scripts\FadeOut.cs" />
     <Compile Include="Assets\MainGame\Scripts\Ine.cs" />
-    <Compile Include="Assets\MainGame\Scripts\IneSliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Ine002.cs" />
     <Compile Include="Assets\MainGame\Scripts\IneSpawn.cs" />
-    <Compile Include="Assets\MainGame\Scripts\InspecterScale.cs" />
     <Compile Include="Assets\MainGame\Scripts\LettuceTatle.cs" />
     <Compile Include="Assets\MainGame\Scripts\LettuceTatleSliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\LimitTime.cs" />
@@ -235,9 +233,15 @@
     <Compile Include="Assets\MainGame\Scripts\Ranking.cs" />
     <Compile Include="Assets\MainGame\Scripts\Record.cs" />
     <Compile Include="Assets\MainGame\Scripts\ResultScore.cs" />
-    <Compile Include="Assets\MainGame\Scripts\RiceSliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice00SliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice01SliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice02SliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice10SliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice11SliceEvent.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Rice12SliceEvent.cs" />
     <Compile Include="Assets\MainGame\Scripts\Score.cs" />
     <Compile Include="Assets\MainGame\Scripts\Spawner.cs" />
+    <Compile Include="Assets\MainGame\Scripts\Spawner02.cs" />
     <Compile Include="Assets\MainGame\Scripts\Yasai.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
@@ -249,6 +253,7 @@
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\RiceIcon.cs" />
     <None Include="Assets\ObjectPool\readme.txt" />
     <None Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\readme.txt" />
     <None Include="Assets\FunkyCode\SmartSlicer2D\Changelog.txt" />
@@ -868,7 +873,12 @@
       <HintPath>C:/CasualGame001/CasualGameTemplate/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="UniRx.csproj">
+      <Project>{D0AB38CE-B083-D5B8-BB48-5F5E7430C0F2}</Project>
+      <Name>UniRx</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,10 +7,8 @@ namespace Slicer2D
 	public class LettuceTatleSliceEvent : MonoBehaviour
 	{
 		[SerializeField, Header("スコアオブジェクト")] GameObject g_ScoreTexObj;
-
 		[SerializeField, Header("現在の大きさ")] double currentSize = 0;
 		[SerializeField, Header("現在の大きさのパーセンテージ")] float currentSizePercent = 0;
-
 		[SerializeField, Header("食べ物の種類")] GameObject Type;
 
 		void Start()
@@ -23,11 +21,10 @@ namespace Slicer2D
 			if (currentSize == 0)
 			{
 				currentSize = Polygon2DList.CreateFromGameObject(gameObject)[0].ToWorldSpace(transform).GetArea();
-				Debug.Log(GameObject.Find("DataHolder").GetComponent<Data>().GetOriginalTatleSize());
 				currentSizePercent = (float)System.Math.Round((currentSize / GameObject.Find("DataHolder").GetComponent<Data>().GetOriginalTatleSize()) * 100);
 			}
 
-			Type = GameObject.Find("DataHolder").GetComponent<Data>().GetVegiIcon();
+			Type = GameObject.Find("DataHolder").GetComponent<Data>().GetVegeIcon();
 		}
 
 		//オブジェクトをスライスしたら
@@ -35,7 +32,6 @@ namespace Slicer2D
 		{
 			//親オブジェクトを取得
 			GameObject OyaKame = transform.root.gameObject.transform.GetChild(0).gameObject;
-			Debug.Log(OyaKame.name); // 親オブジェクト名を出力
 			OyaKame.GetComponent<LettuceTatle>().SetCutted();
 
 			//スライスされた全オブジェクトを読み込み
@@ -55,26 +51,12 @@ namespace Slicer2D
 			}
 		}
 
-		private void OnTriggerEnter2D(Collider2D other)
-		{
-			//稲に当たったら点数を減らす
-			if (other.gameObject.tag == "Ine")
-			{
-				Destroy(this.gameObject);
-			}
-		}
-
 		private void OnCollisionEnter2D(Collision2D collision)
 		{
 			if (collision.gameObject.tag == "Basket")
-			{
-				//スコア追加
-				//元の大きさと現在の大きさの％でスコアを決める % = 今の大きさ/元の大きさ*100
-				//float Ten = currentSizePercent * 10;
-				//g_ScoreTexObj.GetComponent<Score>().AddScore((int)Ten);
-				
+			{	
 				//アイコンの生成
-				if (0 <= currentSizePercent && currentSizePercent < 30) //0～２９
+				if (0 <= currentSizePercent && currentSizePercent < 30)
 				{
 					Instantiate(Type, this.transform.position, Quaternion.identity);
 				}
