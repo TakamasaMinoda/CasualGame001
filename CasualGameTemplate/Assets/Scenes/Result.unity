@@ -738,7 +738,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 727267790}
-        m_MethodName: LoadMain
+        m_MethodName: Retry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1557,7 +1557,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1759618920}
-        m_MethodName: Quit
+        m_MethodName: OnLoadStage
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1866,6 +1866,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3064642000540971752, guid: a521401ea763436488d37aa6f8abfb9c,
+        type: 3}
+      propertyPath: g_MaxStage
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3064642000540971753, guid: a521401ea763436488d37aa6f8abfb9c,
         type: 3}
       propertyPath: m_LocalPosition.x

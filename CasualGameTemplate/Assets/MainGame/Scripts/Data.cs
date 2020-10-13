@@ -26,6 +26,51 @@ public class Data : MonoBehaviour
 	//ノルマスコア
 	[SerializeField, Header("ノルマスコアリスト")] static int[] g_NormaScore = new int[4];
 
+	//プレイヤーが今いるステージの名前
+	[SerializeField, Header("今のステージ")] static int g_NowStage=0; //最終的にplayerprefでクリアしたステージからやり直し可能にする
+	[SerializeField, Header("最大のステージ数")] int g_MaxStage;
+
+	private void Awake()
+	{
+		//現在のステージのロード
+		LoadNowStage();
+		if(g_NowStage> g_MaxStage)
+		{
+			ResetNowStage();
+		}
+	}
+
+	public int GetMaxStage()
+	{
+		return g_MaxStage;
+	}
+
+	public void SaveNowStage()
+	{
+		PlayerPrefs.SetInt("現在のステージ", g_NowStage);
+	}
+
+	public int LoadNowStage()
+	{
+		g_NowStage = PlayerPrefs.GetInt("現在のステージ");
+		return g_NowStage;
+	}
+
+	public int GetNowStage()
+	{
+		return g_NowStage;
+	}
+
+	public void SetNowStage()
+	{
+		g_NowStage++;
+	}
+
+	public void ResetNowStage()
+	{
+		g_NowStage = 0;
+	}
+
 	public void SetNormaScore(int _Norma01, int _Norma02, int _Norma03, int _Norma04)
 	{
 		g_NormaScore[0] = _Norma01;

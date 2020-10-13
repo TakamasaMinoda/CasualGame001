@@ -43,3 +43,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bffc40084b2439344982a83b6330c326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  originalRiceSize:
+  - 0
+  - 0
+  - 0
+  OriginalTatleSize: 0
+  OriginalFishTailSize: 0
+  OriginalFishHeadSize: 0
+  OriginalCowTailSize: 0
+  OriginalCowHeadSize: 0
+  g_RiceIcon: {fileID: 0}
+  g_VegeIcon: {fileID: 0}
+  g_FishIcon: {fileID: 0}
+  g_MeatIcon: {fileID: 0}
+  ScoreText: {fileID: 0}
+  g_MaxStage: 2
