@@ -145,6 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   g_ChangeSpeed: 1.5
+  VegeScore: 100
 --- !u!114 &8339894463636819309
 MonoBehaviour:
   m_ObjectHideFlags: 0

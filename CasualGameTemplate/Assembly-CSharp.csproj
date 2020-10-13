@@ -65,6 +65,8 @@
     <Compile Include="Assets\Cow.cs" />
     <Compile Include="Assets\CowHead.cs" />
     <Compile Include="Assets\CowTail.cs" />
+    <Compile Include="Assets\CowWing.cs" />
+    <Compile Include="Assets\DestroyZone.cs" />
     <Compile Include="Assets\Fish.cs" />
     <Compile Include="Assets\FishHead.cs" />
     <Compile Include="Assets\FishIcon.cs" />
@@ -250,6 +252,8 @@
     <Compile Include="Assets\MainGame\Scripts\Spawner02.cs" />
     <Compile Include="Assets\MainGame\Scripts\Yasai.cs" />
     <Compile Include="Assets\MeatIcon.cs" />
+    <Compile Include="Assets\NumCon.cs" />
+    <Compile Include="Assets\NumberScore.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPool.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolItem.cs" />
     <Compile Include="Assets\ObjectPool\ObjectPoolManager_sample.cs" />

@@ -35,14 +35,11 @@ namespace Slicer2D
 		private void Update()
 		{
 			//要素数分だけ切られているかどうかのチェックを行う
-			if (!SliceHead)
+			for (int i = 0; i < g_Count; i++)
 			{
-				for (int i = 0; i < g_Count; i++)
+				if (g_isCutted[i] == false)
 				{
-					if (g_isCutted[i] == false)
-					{
-						return;
-					}
+					return;
 				}
 			}
 

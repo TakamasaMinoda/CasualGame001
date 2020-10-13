@@ -7,6 +7,7 @@ using A_rosuko.ObjectPool;
 public class Yasai : MonoBehaviour
 {
 	[SerializeField,Header("フェードスピード")]private float g_ChangeSpeed = 1.5f;
+	[SerializeField, Header("野菜の点数")] int VegeScore;
 	private SpriteRenderer SpriteRender;
 	private Tween g_Anim;
 
@@ -31,7 +32,7 @@ public class Yasai : MonoBehaviour
 	//削除関数
 	void End()
 	{
-		GameObject.Find("ScoreText").GetComponent<Score>().AddVegeScore();
+		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(VegeScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}
 }

@@ -68,8 +68,6 @@ namespace Slicer2D
 		{
 			if (collision.gameObject.tag == "Basket")
 			{
-				gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
-
 				//アイコンの生成
 				if (0 <= currentSizePercent && currentSizePercent < 70)
 				{

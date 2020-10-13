@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	public GameObject[] g_PrefabIne;
+	[SerializeField, Header("稲オブジェクト")] public GameObject[] g_PrefabIne;
+	[SerializeField, Header("コメオブジェクト")] public GameObject[] g_PrefabRice;
 	float frame;
 	[SerializeField,Header("リスポーン時間")]float RespornTime;
 
@@ -29,6 +30,14 @@ public class Spawner : MonoBehaviour
 
 				frame = 0;
 			}
+		}
+	}
+
+	public void CreateRice(int i)
+	{
+		if(frame % RespornTime==0)
+		{
+			Instantiate(g_PrefabRice[i], this.transform.position, Quaternion.identity);
 		}
 	}
 }

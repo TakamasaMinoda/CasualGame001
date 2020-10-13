@@ -8,6 +8,7 @@ using A_rosuko.ObjectPool;
 public class FishIcon : MonoBehaviour
 {
 	[SerializeField, Header("フェードスピード")] private float g_ChangeSpeed = 1.5f;
+	[SerializeField, Header("魚の点数")] int FishScore;
 	private SpriteRenderer SpriteRender;
 	private Tween g_Anim;
 
@@ -32,7 +33,7 @@ public class FishIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
-		GameObject.Find("ScoreText").GetComponent<Score>().AddFishScore();
+		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(FishScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}
 }

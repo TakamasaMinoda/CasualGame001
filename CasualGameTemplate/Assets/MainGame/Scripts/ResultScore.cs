@@ -5,24 +5,34 @@ using UnityEngine.UI;
 
 public class ResultScore : MonoBehaviour
 {
-	[SerializeField, Header("米の数")] int g_RiceScore;
-	[SerializeField, Header("野菜の数")] int g_VegeScore;
-	[SerializeField, Header("魚の数")] int g_FishScore;
-	[SerializeField, Header("肉の数")] int g_MeatScore;
+	[SerializeField, Header("スコアテキスト")] Text g_ScoreText;
+	[SerializeField, Header("スコア")] int g_NowScore;
+	[SerializeField, Header("星りすと")] GameObject[] Stars;
+	[SerializeField, Header("星テキストりすと")] Text[] StarsText;
+
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		g_RiceScore = GameObject.Find("DataHolder").GetComponent<Data>().GetRiceScore();
-		g_VegeScore = GameObject.Find("DataHolder").GetComponent<Data>().GetVegeScore();
-		g_FishScore = GameObject.Find("DataHolder").GetComponent<Data>().GetFishScore();
-		g_MeatScore = GameObject.Find("DataHolder").GetComponent<Data>().GetMeatScore();
+		g_ScoreText = GetComponent<Text>();
+		g_NowScore = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
 
-		gameObject.GetComponent<Text>().text =  
-			"米の数 : " + g_RiceScore.ToString("D2") 
-		+"\n野菜の数 : " + g_VegeScore.ToString("D2")
-		+ "\n魚の数 : " + g_FishScore.ToString("D2")
-		+ "\n肉の数 : " + g_MeatScore.ToString("D2");
+		g_ScoreText.text = "Score:" + g_NowScore.ToString("D4");
 
+		//星の数だけノルマクリアの判定をする
+		for(int i=0;i<Stars.Length;i++)
+		{
+		   int temp=GameObject.Find("DataHolder").GetComponent<Data>().GetNormaSocre(i);
+			Debug.Log(temp);
+			if(temp< g_NowScore)
+			{
+				Stars[i].SetActive(true);
+				StarsText[i].text = temp.ToString("D4");
+			}
+			else
+			{
+				Stars[i].SetActive(false);
+			}
+		}
 	}
 }

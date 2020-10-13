@@ -6,8 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class OnClickButton : MonoBehaviour
 {
+	GameObject g_DataHolder;
+
 	public void LoadMain()
 	{
+		SceneManager.LoadScene("Main_ver2");
+	}
+
+	public void OnLoadStage01()
+	{
+		//ノルマの設定を行う //べたうちでしかスコア変更できない
+		GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 1000, 2000);
+
 		SceneManager.LoadScene("Main_ver2");
 	}
 

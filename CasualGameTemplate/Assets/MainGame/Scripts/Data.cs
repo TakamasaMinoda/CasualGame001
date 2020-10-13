@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class Data : MonoBehaviour
 {
-	[SerializeField, Header("米の数")]   static int g_RiceScore;
-	[SerializeField, Header("野菜の数")] static int g_VegeScore;
-	[SerializeField, Header("魚の数")]   static int g_FishScore;
-	[SerializeField, Header("肉の数")]   static int g_MeatScore;
+	
 
 	[SerializeField, Header("米の大きさ")] double[] originalRiceSize = new double[3];
 	[SerializeField, Header("亀の大きさ")] double OriginalTatleSize;
@@ -24,52 +21,32 @@ public class Data : MonoBehaviour
 	[SerializeField, Header("肉アイコン")] GameObject g_MeatIcon;
 
 	[SerializeField, Header("スコアテキスト")] GameObject ScoreText;
+	[SerializeField, Header("スコア")] static int g_NowScore;
 
+	//ノルマスコア
+	[SerializeField, Header("ノルマスコアリスト")] static int[] g_NormaScore = new int[4];
 
+	public void SetNormaScore(int _Norma01, int _Norma02, int _Norma03, int _Norma04)
+	{
+		g_NormaScore[0] = _Norma01;
+		g_NormaScore[1] = _Norma02;
+		g_NormaScore[2] = _Norma03;
+		g_NormaScore[3] = _Norma04;
+	}
+
+	public int GetNormaSocre(int n)
+	{
+		return g_NormaScore[n];
+	}
 
 	public void SetScore()
 	{
-		SetRiceScore(ScoreText.GetComponent<Score>().GetRiceScore());
-		SetVegeScore(ScoreText.GetComponent<Score>().GetVegeScore());
-		SetFishScore(ScoreText.GetComponent<Score>().GetFishScore());
-		SetMeatScore(ScoreText.GetComponent<Score>().GetMeatScore());
+		g_NowScore = ScoreText.GetComponent<Score>().GetScore();
 	}
 
-	public void SetRiceScore(int _RiceScore)
+	public int GetScore()
 	{
-		g_RiceScore = _RiceScore;
-	}
-	
-	public int GetRiceScore()
-	{
-		return g_RiceScore;
-	}
-	public int GetVegeScore()
-	{
-		return g_VegeScore;
-	}
-	public int GetFishScore()
-	{
-		return g_FishScore;
-	}
-	public int GetMeatScore()
-	{
-		return g_MeatScore;
-	}
-
-	public void SetVegeScore(int _VegeScore)
-	{
-		g_VegeScore = _VegeScore;
-	}
-
-	public void SetFishScore(int _FishScore)
-	{
-		g_FishScore = _FishScore;
-	}
-
-	public void SetMeatScore(int _MeatScore)
-	{
-		g_MeatScore = _MeatScore;
+		return g_NowScore;
 	}
 
 	public double GetOriginalRiceSize(int _ID)

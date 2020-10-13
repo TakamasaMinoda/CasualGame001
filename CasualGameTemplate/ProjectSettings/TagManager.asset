@@ -11,6 +11,7 @@ TagManager:
   - Damage
   - Ine1
   - Ine2
+  - Destroy
   layers:
   - Default
   - TransparentFX

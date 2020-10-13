@@ -7,6 +7,7 @@ using A_rosuko.ObjectPool;
 public class MeatIcon : MonoBehaviour
 {
 	[SerializeField, Header("フェードスピード")] private float g_ChangeSpeed = 1.5f;
+	[SerializeField, Header("肉の点数")] int MeatScore;
 	private SpriteRenderer SpriteRender;
 	private Tween g_Anim;
 
@@ -31,7 +32,7 @@ public class MeatIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
-		GameObject.Find("ScoreText").GetComponent<Score>().AddMeatScore();
+		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(MeatScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}
 }

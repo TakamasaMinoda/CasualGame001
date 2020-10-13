@@ -42,7 +42,7 @@ namespace Slicer2D
 		{
 			//親稲を取得
 			GameObject OyaFish = transform.root.gameObject.transform.GetChild(0).gameObject;
-			OyaFish.GetComponent<Fish>().SetCutted();
+			OyaFish.GetComponent<Fish>().CutHead();
 
 			//スライスされた全オブジェクトを読み込み
 			foreach (GameObject parts in slice.GetGameObjects())

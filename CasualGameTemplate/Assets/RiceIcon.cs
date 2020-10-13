@@ -7,6 +7,7 @@ using A_rosuko.ObjectPool;
 public class RiceIcon : MonoBehaviour
 {
 	[SerializeField, Header("フェードスピード")] private float g_ChangeSpeed = 1.5f;
+	[SerializeField, Header("米の点数")] int RiceScore;
 	private SpriteRenderer SpriteRender;
 	private Tween g_Anim;
 
@@ -31,7 +32,7 @@ public class RiceIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
-		GameObject.Find("ScoreText").GetComponent<Score>().AddRiceScore();
+		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(RiceScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}
 }

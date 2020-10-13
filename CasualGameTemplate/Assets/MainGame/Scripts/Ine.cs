@@ -37,6 +37,12 @@ public class Ine : MonoBehaviour
 			{
 				return;
 			}
+			else
+			{
+				//切られている米の添え字だからそのゲームオブジェクトを生成する感じにしたい
+				//GameObject.Find("IneSpawn").GetComponent<Spawner>().CreateRice(i);
+				//生成できたらかっとをfalseにする g_isCutted[i] = false; g_CutCount--;
+			}
 		}
 
 		//稲フェードアウト
