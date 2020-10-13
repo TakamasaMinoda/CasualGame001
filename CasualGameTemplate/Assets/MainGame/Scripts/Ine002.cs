@@ -55,7 +55,11 @@ public class Ine002 : MonoBehaviour
 		}
 
 		//マシーンを止める
-		GameObject.Find("EnemySpawn_2").GetComponent<EnemySpawner>().StopSpawn();
+		if(GameObject.Find("EnemySpawn_2"))
+		{
+			GameObject.Find("EnemySpawn_2").GetComponent<EnemySpawner>().StopSpawn();
+		}
+		
 	}
 
 	//カウント可算とboolをtrue

@@ -39,7 +39,7 @@ namespace Slicer2D
 		void SliceEvent(Slice2D slice)
 		{
 			//親稲を取得
-			GameObject OyaIne = transform.root.gameObject;
+			GameObject OyaIne = GameObject.Find("Ine");
 			OyaIne.GetComponent<Ine>().SetCutted();
 
 			//スライスされた全オブジェクトを読み込み

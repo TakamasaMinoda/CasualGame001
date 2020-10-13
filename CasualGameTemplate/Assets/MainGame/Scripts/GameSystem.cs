@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameSystem : MonoBehaviour
 {
 	[SerializeField,Header("全ゲームオブジェクト")] GameObject g_GameObjects;
 	[SerializeField] GameObject g_FadeSprite;
+	[SerializeField] GameObject TimeUpObj;
 
 	private void Start()
 	{
@@ -20,6 +22,13 @@ public class GameSystem : MonoBehaviour
 		{
 			g_FadeSprite = GameObject.Find("FadeSprite");
 		}
+
+		if(!TimeUpObj)
+		{
+			TimeUpObj =  GameObject.Find("TimeUp");
+		}
+
+		TimeUpObj.SetActive(false);
 
 		//フェードアウト
 		g_FadeSprite.GetComponent<Image>().color = new Color(1, 1, 1, 1);
@@ -44,9 +53,21 @@ public class GameSystem : MonoBehaviour
 
 	IEnumerator End()
 	{
-		yield return new WaitForSeconds(3);
+		g_GameObjects.SetActive(false);
+
+		TimeUpObj.SetActive(true);
 
 		//フェードイン
 		DOTween.ToAlpha(() => g_FadeSprite.GetComponent<Image>().color, color => g_FadeSprite.GetComponent<Image>().color = color, 1f, 2f);
+
+		yield return new WaitForSeconds(3);
+
+		SceneManager.LoadScene("Result");
+
+	}
+
+	public void StartFadeIn()
+	{
+		StartCoroutine("End");
 	}
 }

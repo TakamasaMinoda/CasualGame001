@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2531737896204781603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2531737896204781601}
+  - component: {fileID: 2531737896204781600}
+  m_Layer: 0
+  m_Name: DataHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2531737896204781601
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2531737896204781603}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 89.02904, y: 362.55618, z: -1011.0798}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2531737896204781600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2531737896204781603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bffc40084b2439344982a83b6330c326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  originalRiceSize:
+  - 0.0552055845361608
+  - 0.0864987159302189
+  - 0.10568309051952
+  OriginalTatleSize: 1.86805397749829
+  OriginalFishTailSize: 0.377424061203961
+  OriginalFishHeadSize: 0.716184036985396
+  OriginalCowTailSize: 0.56661469427886
+  OriginalCowHeadSize: 1.08105076654482
+  g_RiceIcon: {fileID: 7657031371498946072, guid: 03db7c614e346da4dabcf9ae35253e75,
+    type: 3}
+  g_VegeIcon: {fileID: 4044317506355847100, guid: 4bb901329338c554c8c2feb9a778e8b3,
+    type: 3}
+  g_FishIcon: {fileID: 6772098905662599003, guid: 70a58259537325a42821e46117e0ae5f,
+    type: 3}
+  g_MeatIcon: {fileID: 3260173232720512797, guid: 9d8e42e48bed13144857cda288ab4847,
+    type: 3}
+  ScoreText: {fileID: 0}
+  g_MaxStage: 2

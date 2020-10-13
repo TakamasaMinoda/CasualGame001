@@ -16,6 +16,7 @@ public class LimitTime : MonoBehaviour
 	{
 		g_NowTime = g_LimitTime;
 		LimitText = gameObject.GetComponent<Text>();
+		
 	}
 
 	// Update is called once per frame
@@ -29,13 +30,13 @@ public class LimitTime : MonoBehaviour
 		}
 		else
 		{
-			LimitText.text = "終了";
+			//LimitText.text = "終了";
 
 			//データホルダーにスコアを保存する
 			GameObject.Find("DataHolder").GetComponent<Data>().SetScore();
 
-			//仮
-			SceneManager.LoadScene("Result");
+			//フェードインスタート
+			GameObject.Find("GameSystem").GetComponent<GameSystem>().StartFadeIn();
 		}
 	}
 

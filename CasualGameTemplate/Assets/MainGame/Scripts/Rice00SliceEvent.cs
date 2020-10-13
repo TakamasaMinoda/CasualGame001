@@ -5,16 +5,18 @@ namespace Slicer2D
 {
 	public class Rice00SliceEvent : MonoBehaviour
 	{
-		GameObject g_ScoreTexObj;
+		[SerializeField, Header("スコアオブジェクト")] GameObject g_ScoreTexObj;
 		[SerializeField, Header("現在の大きさ")] double currentSize = 0;
 		[SerializeField, Header("現在の大きさのパーセンテージ")] float currentSizePercent = 0;
-
 		[SerializeField, Header("食べ物の種類")] GameObject Type;
+
+		[SerializeField, Header("スライサーのコンポーネント")] Slicer2D g_slicerCS;
 
 		void Start()
 		{
-			Slicer2D slicer = GetComponent<Slicer2D>();
-			slicer.AddResultEvent(SliceEvent);
+			//スライサーコンポーネントの取得
+			g_slicerCS = GetComponent<Slicer2D>();
+			g_slicerCS.AddResultEvent(SliceEvent);
 
 			//テキストオブジェクトの取得
 			g_ScoreTexObj = GameObject.Find("ScoreText");
@@ -39,7 +41,7 @@ namespace Slicer2D
 		void SliceEvent(Slice2D slice)
 		{
 			//親稲を取得
-			GameObject OyaIne = transform.root.gameObject;
+			GameObject OyaIne = GameObject.Find("Ine");
 			OyaIne.GetComponent<Ine>().SetCutted();
 
 			//スライスされた全オブジェクトを読み込み
