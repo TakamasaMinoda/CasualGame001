@@ -17,13 +17,12 @@ public class ResultScore : MonoBehaviour
 		g_ScoreText = GetComponent<Text>();
 		g_NowScore = GameObject.Find("DataHolder").GetComponent<Data>().GetScore();
 
-		g_ScoreText.text = "Score:" + g_NowScore.ToString("D4");
+		g_ScoreText.text = "Total "+g_NowScore.ToString("D4");
 
 		//星の数だけノルマクリアの判定をする
 		for(int i=0;i<Stars.Length;i++)
 		{
-		   int temp=GameObject.Find("DataHolder").GetComponent<Data>().GetNormaSocre(i);
-			Debug.Log(temp);
+			int temp = GameObject.Find("DataHolder").GetComponent<Data>().GetNormaSocre(i);
 			if(temp< g_NowScore)
 			{
 				Stars[i].SetActive(true);

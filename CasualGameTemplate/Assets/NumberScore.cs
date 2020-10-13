@@ -14,15 +14,6 @@ public class NumberScore : MonoBehaviour
 	private static int dam_sort = 0;    //数字の表示順
 	private const int SORT_MAX = 30000;
 
-	// Start is called before the first frame update
-	void Start()
-	{
-		//初期化
-		//ここではテスト用にスタートで初期化しているけど、数字を表示させたいタイミングで呼び出すのがベター
-		Init(125, new Vector3(0, 0, 0));
-
-	}
-
 	public void Init(int point, Vector3 pos)
 	{
 		//必要な情報を格納
@@ -62,7 +53,8 @@ public class NumberScore : MonoBehaviour
 			numObj.GetComponent<NumCon>().ChangeSprite(digNum);
 
 			//サイズをゲットする
-			float size_w = numObj.GetComponent<SpriteRenderer>().bounds.size.x;
+			//float size_w = numObj.GetComponent<SpriteRenderer>().bounds.size.x;
+			float size_w = numObj.GetComponent<RectTransform>().sizeDelta.x;
 
 			//位置をずらす
 			float ajs_x = size_w * i - (size_w * digit) / 2;

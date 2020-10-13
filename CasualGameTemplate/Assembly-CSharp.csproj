@@ -62,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CircleOutline.cs" />
     <Compile Include="Assets\Cow.cs" />
     <Compile Include="Assets\CowHead.cs" />
     <Compile Include="Assets\CowTail.cs" />

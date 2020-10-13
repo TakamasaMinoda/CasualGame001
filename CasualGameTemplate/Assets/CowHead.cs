@@ -72,11 +72,9 @@ namespace Slicer2D
 				if (0 <= currentSizePercent && currentSizePercent < 70)
 				{
 					Instantiate(Type, this.transform.position, Quaternion.identity);
-					Instantiate(Type, this.transform.position, Quaternion.identity);
 				}
 				else if (70 <= currentSizePercent && currentSizePercent < 100)
 				{
-					Instantiate(Type, this.transform.position, Quaternion.identity);
 					Instantiate(Type, this.transform.position, Quaternion.identity);
 					Instantiate(Type, this.transform.position, Quaternion.identity);
 				}
@@ -97,7 +95,6 @@ namespace Slicer2D
 				}
 				else if (70 <= currentSizePercent && currentSizePercent < 100)
 				{
-					Instantiate(Type, this.transform.position, Quaternion.identity);
 					Instantiate(Type, this.transform.position, Quaternion.identity);
 					Instantiate(Type, this.transform.position, Quaternion.identity);
 				}

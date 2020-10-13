@@ -16,8 +16,8 @@ public class Score : MonoBehaviour
 	private void Start()
 	{
 		g_ScoreText = GetComponent<Text>();
-		g_NowScore = 0;
 		g_ScoreText.text = "Score:" + g_NowScore.ToString("D4");
+		g_NowScore = 0;
 
 		//仮のノルマスコア設定
 		GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 1000, 2000);
