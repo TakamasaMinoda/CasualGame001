@@ -8,6 +8,7 @@ public class LettuceTatle : MonoBehaviour
 	[SerializeField, Header("亀が切られたかどうか")] List<bool> g_isCutted = new List<bool>();
 	[SerializeField, Header("切った数")] int g_CutCount;
 	[SerializeField, Header("スクリプトを止める")] bool StopScript;
+	[SerializeField, Header("煙エフェクト")] GameObject g_Effect;
 
 	void Start()
 	{
@@ -22,6 +23,9 @@ public class LettuceTatle : MonoBehaviour
 
 		//スクリプトを止めるため変数の初期化
 		StopScript = false;
+
+		//エフェクト追加
+		g_Effect.SetActive(false);
 	}
 
 	private void Update()
@@ -50,6 +54,8 @@ public class LettuceTatle : MonoBehaviour
 		//亀フェードアウト
 		if (!this.gameObject.GetComponent<FadeOut>())
 		{
+			//エフェクト追加
+			g_Effect.SetActive(true);
 			this.gameObject.AddComponent<FadeOut>();
 		}
 	}

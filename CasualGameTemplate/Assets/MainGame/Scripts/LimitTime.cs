@@ -26,7 +26,7 @@ public class LimitTime : MonoBehaviour
 
 		if (g_NowTime >= 0)
 		{
-			LimitText.text = "あと" + g_NowTime.ToString("f1") + "秒";
+			LimitText.text = "あと" + g_NowTime.ToString("f0") + "秒";
 		}
 		else
 		{

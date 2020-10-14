@@ -12,6 +12,8 @@ namespace Slicer2D
 
 		[SerializeField, Header("頭をきったら")] bool SliceHead;
 
+		[SerializeField, Header("煙エフェクト")] GameObject g_Effect;
+
 		void Start()
 		{
 			//子オブジェクトの数分だけ回す
@@ -25,6 +27,9 @@ namespace Slicer2D
 
 			//スクリプトを止めるため変数の初期化
 			StopScript = false;
+
+			//エフェクト追加
+			g_Effect.SetActive(false);
 		}
 
 		private void Update()
@@ -57,6 +62,9 @@ namespace Slicer2D
 			//亀フェードアウト
 			if (!this.gameObject.GetComponent<FadeOut>())
 			{
+				//エフェクト追加
+				g_Effect.SetActive(true);
+
 				this.gameObject.AddComponent<FadeOut>();
 			}
 		}

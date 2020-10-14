@@ -15,22 +15,32 @@ public class OnClickButton : MonoBehaviour
 			case 0:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-				SceneManager.LoadScene("Stage01");
+
 				break;
 			case 1:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
-				SceneManager.LoadScene("Stage02");
+
 				break;
 			case 2:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
-				SceneManager.LoadScene("Stage03");
+				break;
+			case 3:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 4:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+
 				break;
 			default:
 				SceneManager.LoadScene("Title");
 				break;
 		}
+
+		SceneManager.LoadScene("Main");
 	}
 
 	public void OnClickStart()
@@ -46,55 +56,78 @@ public class OnClickButton : MonoBehaviour
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().ResetNowStage();
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-				SceneManager.LoadScene("Stage01");
+				//レベルデザインプログラムを入れる
 				break;
 			case 1:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
-				SceneManager.LoadScene("Stage02");
 				break;
 			case 2:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
-				SceneManager.LoadScene("Stage03");
+				break;
+			case 3:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 4:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+
 				break;
 			default:
 				//最大ステージまでクリアした
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().ResetNowStage();
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-				SceneManager.LoadScene("Stage01");
 				break;
 		}
+
+		SceneManager.LoadScene("Main");
 	}
 
 	public void OnLoadStage()
 	{
 		GameObject.Find("DataHolder").GetComponent<Data>().SetNowStage();
+		Debug.Log(GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage());
 
 		switch (GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage())
 		{
 			case 0:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-				SceneManager.LoadScene("Stage01");
+
 				break;
 			case 1:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
-				SceneManager.LoadScene("Stage02");
+
 				break;
 			case 2:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
-				SceneManager.LoadScene("Stage03");
 				break;
-			default:
-				SceneManager.LoadScene("Title");
+			case 3:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 4:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
 				break;
 		}
 
-		GameObject.Find("DataHolder").GetComponent<Data>().SaveNowStage(); GameObject.Find("DataHolder").GetComponent<Data>().SaveNowStage();
+		GameObject.Find("DataHolder").GetComponent<Data>().SaveNowStage();
+
+		if(GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage()< GameObject.Find("DataHolder").GetComponent<Data>().GetMaxStage())
+		{
+			SceneManager.LoadScene("Main");
+		}
+		else
+		{
+			SceneManager.LoadScene("Title");
+		}
+		
 	}
 
 	public void Quit()

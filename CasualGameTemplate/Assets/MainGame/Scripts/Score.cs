@@ -16,7 +16,7 @@ public class Score : MonoBehaviour
 	private void Start()
 	{
 		g_ScoreText = GetComponent<Text>();
-		g_ScoreText.text = "Score:" + g_NowScore.ToString("D4");
+		g_ScoreText.text = "Score:" + g_NowScore.ToString();
 		g_NowScore = 0;
 	}
 
@@ -28,6 +28,6 @@ public class Score : MonoBehaviour
 	public void AddScore(int _Add)
 	{
 		g_NowScore += _Add;
-		g_ScoreText.text = "Score:" + g_NowScore.ToString("D4");
+		g_ScoreText.text = "Score:" + g_NowScore.ToString();
 	}
 }

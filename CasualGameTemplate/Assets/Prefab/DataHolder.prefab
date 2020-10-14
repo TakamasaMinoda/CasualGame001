@@ -57,4 +57,4 @@ MonoBehaviour:
   g_FishIcon: {fileID: 0}
   g_MeatIcon: {fileID: 0}
   ScoreText: {fileID: 0}
-  g_MaxStage: 2
+  g_MaxStage: 4

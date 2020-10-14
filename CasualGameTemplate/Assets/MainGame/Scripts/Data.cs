@@ -34,10 +34,7 @@ public class Data : MonoBehaviour
 	{
 		//現在のステージのロード
 		LoadNowStage();
-		if(g_NowStage> g_MaxStage)
-		{
-			ResetNowStage();
-		}
+		Debug.Log(g_NowStage);
 	}
 
 	public int GetMaxStage()
@@ -69,6 +66,7 @@ public class Data : MonoBehaviour
 	public void ResetNowStage()
 	{
 		g_NowStage = 0;
+		SaveNowStage();
 	}
 
 	public void SetNormaScore(int _Norma01, int _Norma02, int _Norma03, int _Norma04)

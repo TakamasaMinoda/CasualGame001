@@ -7,7 +7,24 @@ public class EnemySpawner : MonoBehaviour
 	[SerializeField] GameObject[] g_Monster;
 	int frame;
 
-	[SerializeField] int[] MonsterList;
+	//Inspectorに複数データを表示するためのクラス
+	[System.SerializableAttribute]
+	public class MonsterListList
+	{
+		public List<int> MonsterList = new List<int>();
+
+		public MonsterListList(List<int> list)
+		{
+			MonsterList = list;
+		}
+	}
+
+	//Inspectorに表示される
+	[SerializeField]
+	private List<MonsterListList> LevelList = new List<MonsterListList>();
+
+	[SerializeField] int g_Level;
+
 	[SerializeField] float[] RepopTime;
 
 	[SerializeField] bool g_bStopSpawn;
@@ -16,6 +33,8 @@ public class EnemySpawner : MonoBehaviour
     {
 		frame = 0;
 		g_bStopSpawn = false;
+
+		g_Level = GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage();
 	}
 
     void FixedUpdate()
@@ -23,13 +42,14 @@ public class EnemySpawner : MonoBehaviour
 		if (!g_bStopSpawn)
 		{
 			frame++;
-			for(int i=0; i<RepopTime.Length;i++)
+
+			if (frame == RepopTime[g_Level])
 			{
-				if(frame== RepopTime[i])
-				{
-					//オブジェクトプール用にする
-					Instantiate(g_Monster[MonsterList[i]],transform.position, Quaternion.identity);
-				}
+				int rand = Random.Range(0, LevelList[g_Level].MonsterList.Count);
+				//オブジェクトプール用にする
+				Instantiate(g_Monster[LevelList[g_Level].MonsterList[rand]], transform.position, Quaternion.identity);
+
+				frame = 0;
 			}
 		}
     }
