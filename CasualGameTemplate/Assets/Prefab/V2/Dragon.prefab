@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2342063684033055858}
   m_Layer: 0
   m_Name: Dragon
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19890,6 +19890,7 @@ MonoBehaviour:
   g_CutCount: 0
   StopScript: 0
   SliceHead: 0
+  g_Effect: {fileID: 9027616627279949463}
 --- !u!1001 &2119905403936338796
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19959,6 +19960,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6026c881f07917a4d8cb591b7ba99938, type: 3}
+--- !u!1 &9027616627279949463 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6927631092751015419, guid: 6026c881f07917a4d8cb591b7ba99938,
+    type: 3}
+  m_PrefabInstance: {fileID: 2119905403936338796}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4946647376200468890 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6470950487935056630, guid: 6026c881f07917a4d8cb591b7ba99938,

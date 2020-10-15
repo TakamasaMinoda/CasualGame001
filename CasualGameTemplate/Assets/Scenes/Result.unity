@@ -355,7 +355,7 @@ PrefabInstance:
     - target: {fileID: 3064642000540971752, guid: a521401ea763436488d37aa6f8abfb9c,
         type: 3}
       propertyPath: g_MaxStage
-      value: 3
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3064642000540971753, guid: a521401ea763436488d37aa6f8abfb9c,
         type: 3}

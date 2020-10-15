@@ -30,7 +30,12 @@ public class LimitTime : MonoBehaviour
 		}
 		else
 		{
-			//LimitText.text = "終了";
+			//エネミー削除
+			GameObject[] Enemys = GameObject.FindGameObjectsWithTag("Monster");
+			foreach(GameObject enemy in Enemys)
+			{
+				Destroy(enemy);
+			}
 
 			//データホルダーにスコアを保存する
 			GameObject.Find("DataHolder").GetComponent<Data>().SetScore();

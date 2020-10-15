@@ -61,4 +61,4 @@ MonoBehaviour:
   g_MeatIcon: {fileID: 3260173232720512797, guid: 9d8e42e48bed13144857cda288ab4847,
     type: 3}
   ScoreText: {fileID: 0}
-  g_MaxStage: 4
+  g_MaxStage: 19

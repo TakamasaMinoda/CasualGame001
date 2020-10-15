@@ -14,13 +14,11 @@ public class OnClickButton : MonoBehaviour
 		{
 			case 0:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 200, 350, 500);
 				break;
 			case 1:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
-
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 300, 500, 650);
 				break;
 			case 2:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
@@ -32,8 +30,67 @@ public class OnClickButton : MonoBehaviour
 				break;
 			case 4:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 5:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
-
+				break;
+			case 6:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
+				break;
+			case 7:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 8:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 9:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 10:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+				break;
+			case 11:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 12:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 13:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 14:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 15:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+				break;
+			case 16:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
+				break;
+			case 17:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 18:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 19:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
 				break;
 			default:
 				SceneManager.LoadScene("Title");
@@ -53,14 +110,13 @@ public class OnClickButton : MonoBehaviour
 		switch (GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage())
 		{
 			case 0:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
 				GameObject.Find("DataHolder").GetComponent<Data>().ResetNowStage();
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-				//レベルデザインプログラムを入れる
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 200, 350, 500);
 				break;
 			case 1:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 300, 500, 650);
 				break;
 			case 2:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
@@ -72,9 +128,69 @@ public class OnClickButton : MonoBehaviour
 				break;
 			case 4:
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
-
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
 				break;
+			case 5:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+				break;
+			case 6:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
+				break;
+			case 7:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 8:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 9:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 10:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+				break;
+			case 11:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 12:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 13:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 14:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+			case 15:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
+				break;
+			case 16:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
+				break;
+			case 17:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
+				break;
+			case 18:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
+				break;
+			case 19:
+				//ノルマの設定を行う //べたうちでしかスコア変更できない
+				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
+				break;
+
 			default:
 				//最大ステージまでクリアした
 				//ノルマの設定を行う //べたうちでしかスコア変更できない
@@ -89,45 +205,10 @@ public class OnClickButton : MonoBehaviour
 	public void OnLoadStage()
 	{
 		GameObject.Find("DataHolder").GetComponent<Data>().SetNowStage();
-		Debug.Log(GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage());
-
-		switch (GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage())
-		{
-			case 0:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(100, 500, 800, 1200);
-
-				break;
-			case 1:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(300, 800, 1200, 1350);
-
-				break;
-			case 2:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(500, 800, 1500, 2200);
-				break;
-			case 3:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(800, 1000, 1450, 2000);
-				break;
-			case 4:
-				//ノルマの設定を行う //べたうちでしかスコア変更できない
-				GameObject.Find("DataHolder").GetComponent<Data>().SetNormaScore(600, 1200, 1500, 2500);
-				break;
-		}
 
 		GameObject.Find("DataHolder").GetComponent<Data>().SaveNowStage();
 
-		if(GameObject.Find("DataHolder").GetComponent<Data>().GetNowStage()< GameObject.Find("DataHolder").GetComponent<Data>().GetMaxStage())
-		{
-			SceneManager.LoadScene("Main");
-		}
-		else
-		{
-			SceneManager.LoadScene("Title");
-		}
-		
+		SceneManager.LoadScene("Title");
 	}
 
 	public void Quit()
