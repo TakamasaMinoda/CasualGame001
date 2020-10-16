@@ -23,12 +23,39 @@ public class Data : MonoBehaviour
 	[SerializeField, Header("スコアテキスト")] GameObject ScoreText;
 	[SerializeField, Header("スコア")] static int g_NowScore;
 
+	//種類ごとにも個数を入れる
+	[SerializeField, Header("米の数")]static int[] g_IconNum= new int[4];
+
 	//ノルマスコア
 	[SerializeField, Header("ノルマスコアリスト")] static int[] g_NormaScore = new int[4];
 
 	//プレイヤーが今いるステージの名前
 	[SerializeField, Header("今のステージ")] static int g_NowStage=0; //最終的にplayerprefでクリアしたステージからやり直し可能にする
 	[SerializeField, Header("最大のステージ数")] int g_MaxStage;
+
+	//個数ゲット
+	public int GetIconNum(int i)
+	{
+		return g_IconNum[i];
+	}
+
+	//個数を増やす
+	public void AddRiceNum()
+	{
+		g_IconNum[0]++;
+	}
+	public void AddVegeNum()
+	{
+		g_IconNum[1]++;
+	}
+	public void AddFishNum()
+	{
+		g_IconNum[2]++;
+	}
+	public void AddMeatNum()
+	{
+		g_IconNum[3]++;
+	}
 
 	private void Awake()
 	{

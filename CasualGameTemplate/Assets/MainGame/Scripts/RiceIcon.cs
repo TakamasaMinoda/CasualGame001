@@ -32,6 +32,7 @@ public class RiceIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
+		GameObject.Find("DataHolder").GetComponent<Data>().AddRiceNum();
 		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(RiceScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}

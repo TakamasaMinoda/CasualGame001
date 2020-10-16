@@ -32,6 +32,7 @@ public class Yasai : MonoBehaviour
 	//削除関数
 	void End()
 	{
+		GameObject.Find("DataHolder").GetComponent<Data>().AddVegeNum();
 		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(VegeScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}

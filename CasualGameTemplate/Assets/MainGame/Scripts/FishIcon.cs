@@ -33,6 +33,7 @@ public class FishIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
+		GameObject.Find("DataHolder").GetComponent<Data>().AddFishNum();
 		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(FishScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}

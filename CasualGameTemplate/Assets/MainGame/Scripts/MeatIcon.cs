@@ -32,6 +32,7 @@ public class MeatIcon : MonoBehaviour
 	//削除関数
 	void End()
 	{
+		GameObject.Find("DataHolder").GetComponent<Data>().AddMeatNum();
 		GameObject.Find("ScoreText").GetComponent<Score>().AddScore(MeatScore);
 		ObjectPool.Instance.SleepGameObject(gameObject);
 	}
