@@ -11,6 +11,8 @@ public class LimitTime : MonoBehaviour
 	float g_NowTime;
 	Text LimitText;
 
+	[SerializeField] NumCon NumCS;
+
 	// Start is called before the first frame update
 	void Start()
 	{

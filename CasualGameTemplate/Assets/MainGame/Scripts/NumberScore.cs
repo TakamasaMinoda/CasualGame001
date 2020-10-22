@@ -4,117 +4,33 @@ using UnityEngine;
 
 public class NumberScore : MonoBehaviour
 {
-	//表示位置
-	Vector3 init_pos;
+	[SerializeField] private Sprite[] sp = new Sprite[10];
 
-	//表示関連
-	private int point;      //表示する値
-	private float size = 1; //表示サイズ
-
-	private static int dam_sort = 0;    //数字の表示順
-	private const int SORT_MAX = 30000;
-
-	public void Init(int point, Vector3 pos)
+	private void Start()
 	{
-		//必要な情報を格納
-		this.point = point;
+		//NumberAnim();
+	}
 
-		//表示用のダメージを作る
-		CreateNum(point);
+	public void ChangeSprite(int no)
+	{
 
-		init_pos = pos;
+		if (no > 9 || no < 0) no = 0;
+
+		SpriteRenderer spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+		spriteRenderer.sprite = sp[no];
 
 	}
 
-	//描画用の数字を作る
-	private void CreateNum(int point)
-	{
-
-		//桁を割り出す
-		int digit = ChkDigit(point);
-
-		//数字プレハブを読み込む、テスト用のフォルダとファイル名
-		GameObject obj = LoadGObject("test", "NumberTest");
-
-
-		//桁の分だけオブジェクトを作り登録していく
-		for (int i = 0; i < digit; i++)
-		{
-
-			GameObject numObj = Instantiate(obj) as GameObject;
-
-			//子供として登録
-			numObj.transform.parent = transform;
-
-			//現在チェックしている桁の数字を割り出す
-			int digNum = GetPointDigit(point, i + 1);
-
-			//ポイントから数字を切り替える
-			numObj.GetComponent<NumCon>().ChangeSprite(digNum);
-
-			//サイズをゲットする
-			//float size_w = numObj.GetComponent<SpriteRenderer>().bounds.size.x;
-			float size_w = numObj.GetComponent<RectTransform>().sizeDelta.x;
-
-			//位置をずらす
-			float ajs_x = size_w * i - (size_w * digit) / 2;
-			Vector3 pos = new Vector3(numObj.transform.position.x - ajs_x, numObj.transform.position.y, numObj.transform.position.z);
-			numObj.transform.position = pos;
-
-			numObj = null;
-		}
-
-	}
-
-	/**-----------------------------------------------------------------------------------
-     * 以下の関数はテスト用にここに記載しているけど、別のスクリプトファイルとしたほうが使い勝手がいいかも
-     * ----------------------------------------------------------------------------------/
-
-    /**
-    * 整数の桁数を返す
-    * */
-	public static int ChkDigit(int num)
-	{
-
-		//0の場合1桁として返す
-		if (num == 0) return 1;
-
-		//対数とやらを使って返す
-		return (num == 0) ? 1 : ((int)Mathf.Log10(num) + 1);
-
-	}
-	/**
-    * 数値の中から指定した桁の値をかえす
-    * */
-	public static int GetPointDigit(int num, int digit)
-	{
-
-		int res = 0;
-		int pow_dig = (int)Mathf.Pow(10, digit);
-		if (digit == 1)
-		{
-			res = num - (num / pow_dig) * pow_dig;
-		}
-		else
-		{
-			res = (num - (num / pow_dig) * pow_dig) / (int)Mathf.Pow(10, (digit - 1));
-		}
-
-		return res;
-	}
-	/**
-    * オブジェクトを読み込む
-    * リソースフォルダから読み込む
-    * */
-	public static GameObject LoadGObject(string dir_name, string filename)
-	{
-
-		GameObject obj;
-
-		//リソースから読み込むパターン
-		obj = (GameObject)Resources.Load(dir_name + "/" + filename);
-
-		return obj;
-
-	}
+	//void NumberAnim()
+	//{
+	//	Sequence anim = DOTween.Sequence()
+	//				//.Append(transform.DOScale(new Vector3(0.3f, 0.3f, 1), 1.0f))
+	//				.Append(transform.DOMove(new Vector3(this.transform.position.x, this.transform.position.y + 0.5f, 0), 1))
+	//				.Append(DOTween.ToAlpha(() => gameObject.GetComponent<SpriteRenderer>().color, color => gameObject.GetComponent<SpriteRenderer>().color = color, 0, 0.5f))
+	//				.OnComplete(() =>
+	//				{
+	//					//GameObject.Find("ScoreText").GetComponent<Score>().AddScore(2000);
+	//					Destroy(this.gameObject);
+	//				});
+	//}
 }

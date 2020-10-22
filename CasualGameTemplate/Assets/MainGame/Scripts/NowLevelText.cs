@@ -19,7 +19,7 @@ public class NowLevelText : MonoBehaviour
 		}
 		else
 		{
-			gameObject.GetComponent<Text>().text = "今のレベル:" + Level.ToString("D2");
+			gameObject.GetComponent<Text>().text = "今のレベル:" + Level.ToString();
 		}
 	}
 }

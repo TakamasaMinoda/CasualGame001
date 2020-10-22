@@ -272,6 +272,7 @@
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
     <Compile Include="Assets\ObjectPool\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+    <Compile Include="Assets\StartText.cs" />
     <Compile Include="Assets\smoke.cs" />
     <None Include="Assets\Fade\Materials\UI-Fade-Cutout.shader" />
     <None Include="Assets\ObjectPool\readme.txt" />

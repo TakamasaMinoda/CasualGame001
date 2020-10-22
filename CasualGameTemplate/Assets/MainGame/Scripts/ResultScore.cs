@@ -32,11 +32,12 @@ public class ResultScore : MonoBehaviour
 			if(temp< g_NowScore)
 			{
 				Stars[i].GetComponent<Image>().color = new Color(1, 1, 1);
-				StarsText[i].text = temp.ToString("D4");
+				StarsText[i].text = temp.ToString();
 			}
 			else
 			{
 				Stars[i].GetComponent<Image>().color = new Color(0,0,0);
+				StarsText[i].text = temp.ToString();
 			}
 		}
 	}
